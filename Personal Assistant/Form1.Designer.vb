@@ -190,7 +190,7 @@ Partial Class Form1
         '
         Me.TitleL.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.TitleL.AutoSize = True
-        Me.TitleL.ForeColor = System.Drawing.Color.Indigo
+        Me.TitleL.ForeColor = System.Drawing.Color.White
         Me.TitleL.Location = New System.Drawing.Point(52, 9)
         Me.TitleL.Name = "TitleL"
         Me.TitleL.Size = New System.Drawing.Size(46, 20)
