@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.LoginPanel = New System.Windows.Forms.Panel()
         Me.NewUserLL = New System.Windows.Forms.LinkLabel()
         Me.ForgotPassLL = New System.Windows.Forms.LinkLabel()
@@ -87,7 +88,7 @@ Partial Class Form1
         'RightLogoPB
         '
         Me.RightLogoPB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.RightLogoPB.Image = Global.Personal_Assistant.My.Resources.Resources.Sample_Logo
+        Me.RightLogoPB.Image = CType(resources.GetObject("RightLogoPB.Image"), System.Drawing.Image)
         Me.RightLogoPB.Location = New System.Drawing.Point(99, 21)
         Me.RightLogoPB.Name = "RightLogoPB"
         Me.RightLogoPB.Size = New System.Drawing.Size(146, 96)
@@ -141,7 +142,7 @@ Partial Class Form1
         'MinimizePB
         '
         Me.MinimizePB.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MinimizePB.Image = Global.Personal_Assistant.My.Resources.Resources.MinB
+        Me.MinimizePB.Image = CType(resources.GetObject("MinimizePB.Image"), System.Drawing.Image)
         Me.MinimizePB.Location = New System.Drawing.Point(709, 9)
         Me.MinimizePB.Name = "MinimizePB"
         Me.MinimizePB.Size = New System.Drawing.Size(22, 20)
@@ -152,7 +153,7 @@ Partial Class Form1
         'ClosePB
         '
         Me.ClosePB.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ClosePB.Image = Global.Personal_Assistant.My.Resources.Resources.CloseB
+        Me.ClosePB.Image = CType(resources.GetObject("ClosePB.Image"), System.Drawing.Image)
         Me.ClosePB.Location = New System.Drawing.Point(737, 9)
         Me.ClosePB.Name = "ClosePB"
         Me.ClosePB.Size = New System.Drawing.Size(22, 20)
@@ -162,7 +163,7 @@ Partial Class Form1
         '
         'LogoPB
         '
-        Me.LogoPB.Image = Global.Personal_Assistant.My.Resources.Resources.Sample_Logo
+        Me.LogoPB.Image = CType(resources.GetObject("LogoPB.Image"), System.Drawing.Image)
         Me.LogoPB.Location = New System.Drawing.Point(3, 3)
         Me.LogoPB.Name = "LogoPB"
         Me.LogoPB.Size = New System.Drawing.Size(43, 32)
