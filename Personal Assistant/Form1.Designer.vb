@@ -37,12 +37,14 @@ Partial Class Form1
         Me.TitlePanel = New System.Windows.Forms.Panel()
         Me.TitleL = New System.Windows.Forms.Label()
         Me.InfoPanel = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.LoginPanel.SuspendLayout()
         CType(Me.RightLogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinimizePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClosePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitlePanel.SuspendLayout()
+        Me.InfoPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'LoginPanel
@@ -204,10 +206,20 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.InfoPanel.AutoSize = True
         Me.InfoPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.InfoPanel.Controls.Add(Me.Button1)
         Me.InfoPanel.Location = New System.Drawing.Point(3, 44)
         Me.InfoPanel.Name = "InfoPanel"
         Me.InfoPanel.Size = New System.Drawing.Size(418, 470)
         Me.InfoPanel.TabIndex = 3
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(180, 197)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 29)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Sample"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -232,6 +244,7 @@ Partial Class Form1
         CType(Me.LogoPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
+        Me.InfoPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -250,4 +263,5 @@ Partial Class Form1
     Friend WithEvents TitlePanel As Panel
     Friend WithEvents InfoPanel As Panel
     Friend WithEvents TitleL As Label
+    Friend WithEvents Button1 As Button
 End Class
