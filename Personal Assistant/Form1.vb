@@ -3,7 +3,7 @@ Public Class Form1
     Dim loc As Point
     Dim con As New SqlConnection
     Dim cmd As New SqlCommand
-
+    Dim Username As String 'Username
 
     Private Sub TitlePanel_MouseDown(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseDown
         If e.Button = MouseButtons.Left Then
@@ -75,6 +75,20 @@ Public Class Form1
 
 
 
+    'Interactions (Buttons, Labels)
+
+
+
+    Private Sub LoginB_Click(sender As Object, e As EventArgs) Handles LoginB.Click
+        If checkCredentials() Then
+            MsgBox("Login Successful", 0, "Login Successful")
+            'Load Dashboard Form here
+
+        Else
+            MsgBox("Invalid Credentials", 0, "Login Failed")
+        End If
+    End Sub
+
     Private Sub ResetB_Click(sender As Object, e As EventArgs) Handles ResetB.Click
         UsernameTB.Text = "Username"
         PasswordTB.Text = "Password"
@@ -92,6 +106,20 @@ Public Class Form1
 
     End Sub
 
+
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Setting Connection String
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\VB Project\Personal Assistant\Personal Assistant\Personal Assistant\PersonalAssistantDB.mdf;Integrated Security=True"
+
+    End Sub
+
+
+
+
+
+    'User Defined Functions and Subs
+
     Private Function findNumberOfUsers() As Integer
         Dim temp As Integer
         con.Open()
@@ -106,12 +134,26 @@ Public Class Form1
 
     End Function
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Setting Connection String
-        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\VB Project\Personal Assistant\Personal Assistant\Personal Assistant\PersonalAssistantDB.mdf;Integrated Security=True"
-
-
-    End Sub
+    Private Function checkCredentials() As Boolean
+        Dim Pass As String
+        Dim UnameInput As String = UsernameTB.Text
+        Dim PassInput As String = PasswordTB.Text
+        Dim Answer As Boolean = False
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandText = "SELECT Username,Password FROM [User];"
+        Dim dr1 As SqlDataReader
+        dr1 = cmd.ExecuteReader
+        While dr1.Read()
+            Username = dr1("Username")
+            Pass = dr1("Password")
+            If Username = UnameInput And Pass = PassInput Then
+                Answer = True
+            End If
+        End While
+        con.Close()
+        Return Answer
+    End Function
 
 
 End Class
