@@ -37,12 +37,21 @@ Partial Class Form1
         Me.TitlePanel = New System.Windows.Forms.Panel()
         Me.TitleL = New System.Windows.Forms.Label()
         Me.InfoPanel = New System.Windows.Forms.Panel()
+        Me.SecurityPanel = New System.Windows.Forms.Panel()
+        Me.SecurityL = New System.Windows.Forms.Label()
+        Me.SecLogo = New System.Windows.Forms.PictureBox()
+        Me.NextToNewPassB = New System.Windows.Forms.Button()
+        Me.BackToLoginB = New System.Windows.Forms.Button()
+        Me.SecAnswerTB = New System.Windows.Forms.TextBox()
+        Me.SecQuestionTB = New System.Windows.Forms.TextBox()
         Me.LoginPanel.SuspendLayout()
         CType(Me.RightLogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinimizePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClosePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitlePanel.SuspendLayout()
+        Me.SecurityPanel.SuspendLayout()
+        CType(Me.SecLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LoginPanel
@@ -209,6 +218,88 @@ Partial Class Form1
         Me.InfoPanel.Size = New System.Drawing.Size(418, 470)
         Me.InfoPanel.TabIndex = 3
         '
+        'SecurityPanel
+        '
+        Me.SecurityPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SecurityPanel.Controls.Add(Me.SecurityL)
+        Me.SecurityPanel.Controls.Add(Me.SecLogo)
+        Me.SecurityPanel.Controls.Add(Me.NextToNewPassB)
+        Me.SecurityPanel.Controls.Add(Me.BackToLoginB)
+        Me.SecurityPanel.Controls.Add(Me.SecAnswerTB)
+        Me.SecurityPanel.Controls.Add(Me.SecQuestionTB)
+        Me.SecurityPanel.Location = New System.Drawing.Point(427, 44)
+        Me.SecurityPanel.Name = "SecurityPanel"
+        Me.SecurityPanel.Size = New System.Drawing.Size(344, 470)
+        Me.SecurityPanel.TabIndex = 0
+        Me.SecurityPanel.Visible = False
+        '
+        'SecurityL
+        '
+        Me.SecurityL.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.SecurityL.AutoSize = True
+        Me.SecurityL.Font = New System.Drawing.Font("Segoe UI", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.SecurityL.ForeColor = System.Drawing.Color.White
+        Me.SecurityL.Location = New System.Drawing.Point(23, 130)
+        Me.SecurityL.Name = "SecurityL"
+        Me.SecurityL.Size = New System.Drawing.Size(303, 46)
+        Me.SecurityL.TabIndex = 19
+        Me.SecurityL.Text = "Security Question"
+        '
+        'SecLogo
+        '
+        Me.SecLogo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.SecLogo.Image = CType(resources.GetObject("SecLogo.Image"), System.Drawing.Image)
+        Me.SecLogo.Location = New System.Drawing.Point(97, 20)
+        Me.SecLogo.Name = "SecLogo"
+        Me.SecLogo.Size = New System.Drawing.Size(146, 96)
+        Me.SecLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.SecLogo.TabIndex = 18
+        Me.SecLogo.TabStop = False
+        '
+        'NextToNewPassB
+        '
+        Me.NextToNewPassB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NextToNewPassB.Location = New System.Drawing.Point(176, 319)
+        Me.NextToNewPassB.Name = "NextToNewPassB"
+        Me.NextToNewPassB.Size = New System.Drawing.Size(128, 29)
+        Me.NextToNewPassB.TabIndex = 16
+        Me.NextToNewPassB.Text = "Next"
+        Me.NextToNewPassB.UseVisualStyleBackColor = True
+        '
+        'BackToLoginB
+        '
+        Me.BackToLoginB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BackToLoginB.Location = New System.Drawing.Point(45, 319)
+        Me.BackToLoginB.Name = "BackToLoginB"
+        Me.BackToLoginB.Size = New System.Drawing.Size(128, 29)
+        Me.BackToLoginB.TabIndex = 17
+        Me.BackToLoginB.Text = "Back"
+        Me.BackToLoginB.UseVisualStyleBackColor = True
+        '
+        'SecAnswerTB
+        '
+        Me.SecAnswerTB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.SecAnswerTB.Location = New System.Drawing.Point(35, 258)
+        Me.SecAnswerTB.Margin = New System.Windows.Forms.Padding(0)
+        Me.SecAnswerTB.Name = "SecAnswerTB"
+        Me.SecAnswerTB.Size = New System.Drawing.Size(274, 27)
+        Me.SecAnswerTB.TabIndex = 14
+        Me.SecAnswerTB.Text = "Answer"
+        Me.SecAnswerTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'SecQuestionTB
+        '
+        Me.SecQuestionTB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.SecQuestionTB.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.SecQuestionTB.Location = New System.Drawing.Point(35, 200)
+        Me.SecQuestionTB.Margin = New System.Windows.Forms.Padding(0)
+        Me.SecQuestionTB.Multiline = True
+        Me.SecQuestionTB.Name = "SecQuestionTB"
+        Me.SecQuestionTB.Size = New System.Drawing.Size(274, 43)
+        Me.SecQuestionTB.TabIndex = 15
+        Me.SecQuestionTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -217,6 +308,7 @@ Partial Class Form1
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.Indigo
         Me.ClientSize = New System.Drawing.Size(774, 517)
+        Me.Controls.Add(Me.SecurityPanel)
         Me.Controls.Add(Me.InfoPanel)
         Me.Controls.Add(Me.LoginPanel)
         Me.Controls.Add(Me.TitlePanel)
@@ -232,6 +324,9 @@ Partial Class Form1
         CType(Me.LogoPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
+        Me.SecurityPanel.ResumeLayout(False)
+        Me.SecurityPanel.PerformLayout()
+        CType(Me.SecLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -250,4 +345,11 @@ Partial Class Form1
     Friend WithEvents TitlePanel As Panel
     Friend WithEvents InfoPanel As Panel
     Friend WithEvents TitleL As Label
+    Friend WithEvents SecurityPanel As Panel
+    Friend WithEvents SecLogo As PictureBox
+    Friend WithEvents NextToNewPassB As Button
+    Friend WithEvents BackToLoginB As Button
+    Friend WithEvents SecAnswerTB As TextBox
+    Friend WithEvents SecQuestionTB As TextBox
+    Friend WithEvents SecurityL As Label
 End Class

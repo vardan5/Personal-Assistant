@@ -37,6 +37,11 @@ Public Class Form1
     End Sub
     'For Drawing grey Panel border
 
+    Private Sub SecurityPanel_Paint(sender As Object, e As PaintEventArgs) Handles SecurityPanel.Paint
+        ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid)
+    End Sub
+    'For Drawing grey Panel border
+
     Private Sub ClosePB_Click(sender As Object, e As EventArgs) Handles ClosePB.Click
         Me.Close()
     End Sub
@@ -77,7 +82,13 @@ Public Class Form1
 
     'Interactions (Buttons, Labels)
 
+    Private Sub ForgotPassLL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ForgotPassLL.LinkClicked
+        'LoginPanel visible -> false
+        'SecurityPanel visible -> true
+        LoginPanel.Visible = False
+        SecurityPanel.Visible = True
 
+    End Sub
 
     Private Sub LoginB_Click(sender As Object, e As EventArgs) Handles LoginB.Click
         If checkCredentials() Then
