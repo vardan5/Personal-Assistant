@@ -38,13 +38,14 @@ Public Class Form1
     End Sub
 
 
-
-    'LoginPanel
-
-    'For Drawing grey Panel border
-    Private Sub LoginPanel_Paint(sender As Object, e As PaintEventArgs) Handles LoginPanel.Paint
+    'For Drawing grey border for all panels
+    Private Sub LoginPanel_Paint(sender As Object, e As PaintEventArgs) Handles LoginPanel.Paint, EnterUsernamePanel.Paint, SecurityPanel.Paint, ChangePasswordPanel.Paint
         ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid)
     End Sub
+
+
+
+    'LoginPanel
 
     'Username and Password Dissapearing Feature
     Private Sub UsernameTB_Enter(sender As Object, e As EventArgs) Handles UsernameTB.Enter
@@ -110,13 +111,9 @@ Public Class Form1
 
 
     'EnterUsernamePanel
-    'For Drawing grey Panel border
-    Private Sub EnterUsernmaePanel_Paint(sender As Object, e As PaintEventArgs) Handles EnterUsernamePanel.Paint
-        ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid)
-    End Sub
 
     'EnterUsernamePanel Components
-    Private Sub BackToLoginB_Click_1(sender As Object, e As EventArgs) Handles BackToLoginB.Click, BackToSecQuesB.Click
+    Private Sub BackToLoginB_Click_1(sender As Object, e As EventArgs) Handles BackToLoginB.Click
         'LoginPanel visible -> true
         'EnterUsernamePanel visible -> false
         UsernameTB.Text = "Username"
@@ -124,11 +121,10 @@ Public Class Form1
         LoginPanel.Visible = True
         EnterUsernamePanel.Visible = False
     End Sub
-    Private Sub NextToSecQuesB_Click(sender As Object, e As EventArgs) Handles NextToSecQuesB.Click, NextToLoginB.Click
+    Private Sub NextToSecQuesB_Click(sender As Object, e As EventArgs) Handles NextToSecQuesB.Click
         'Getting Username
         Username = EnterUsernameTB.Text
         'To set QuestionTB
-        MsgBox(Username)
         con.Open()
         cmd.Connection = con
         cmd.CommandText = "SELECT SecurityQuestion FROM [User] WHERE Username='" + Username + "';"
@@ -154,24 +150,97 @@ Public Class Form1
 
 
     'SecurityPanel
-    'For Drawing grey Panel border
-    Private Sub SecurityPanel_Paint(sender As Object, e As PaintEventArgs) Handles SecurityPanel.Paint
-        ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid)
-    End Sub
-
 
     'SecurityPanel Components
     Private Sub BackToEnterUnameB_Click(sender As Object, e As EventArgs) Handles BackToEnterUnameB.Click
-        'LoginPanel visible -> true
+        'EnterUsernameTB visible -> true
         'SecurityPanel visible -> false
         EnterUsernameTB.Text = ""
         EnterUsernamePanel.Visible = True
         SecurityPanel.Visible = False
     End Sub
     Private Sub NextToNewPassB_Click(sender As Object, e As EventArgs) Handles NextToNewPassB.Click
-        'Code to open Change Password Panel
-        SecurityPanel.Visible = False
+        'Check if Security Answer match with database
+        Dim secAnswerInput As String = SecAnswerTB.Text
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandText = "select SecurityAnswer from [User] where Username = '" + Username + "';"
+        Dim dr As SqlDataReader = cmd.ExecuteReader
+        dr.Read()
+        If dr("SecurityAnswer") = secAnswerInput Then
+            'Code to open Change Password Panel
+            SecurityPanel.Visible = False
+            ChangePasswordPanel.Visible = True
+        Else
+            MsgBox("The Security Answer given is incorrect. Please try again.", 0, "Attempt Failed")
+        End If
+        con.Close()
     End Sub
+
+
+    'For ChangePasswordPanel
+
+    'ChangePasswordPanel Features
+    Private Sub NewPassTB_Enter(sender As Object, e As EventArgs) Handles NewPassTB.Enter
+        If NewPassTB.Text = "New Password" Then
+            NewPassTB.Text = ""
+        End If
+    End Sub
+    Private Sub NewPassTB_Leave(sender As Object, e As EventArgs) Handles NewPassTB.Leave
+        If NewPassTB.Text = "" Then
+            NewPassTB.Text = "New Password"
+        End If
+    End Sub
+    Private Sub ConfirmPassTB_Enter(sender As Object, e As EventArgs) Handles ConfirmPassTB.Enter
+        If ConfirmPassTB.Text = "Confirm Password" Then
+            ConfirmPassTB.Text = ""
+        End If
+    End Sub
+    Private Sub ConfirmPassTB_Leave(sender As Object, e As EventArgs) Handles ConfirmPassTB.Leave
+        If ConfirmPassTB.Text = "" Then
+            ConfirmPassTB.Text = "Confirm Password"
+        End If
+    End Sub
+
+
+    'ChangePasswordPanel Components
+
+    Private Sub BackToSecQuesB_Click(sender As Object, e As EventArgs) Handles BackToSecQuesB.Click
+        SecAnswerTB.Text = ""
+        ChangePasswordPanel.Visible = False
+        SecurityPanel.Visible = True
+    End Sub
+
+    Private Sub NextToLoginB_Click(sender As Object, e As EventArgs) Handles NextToLoginB.Click
+        Dim newPass As String = NewPassTB.Text
+        If ConfirmPassTB.Text <> newPass Then
+            MsgBox("The entered passwords do not match. Please try again.", 0, "Passwords do not match")
+            NewPassTB.Text = ""
+            ConfirmPassTB.Text = ""
+
+        ElseIf newPass = "" Then
+            MsgBox("Password cannot be empty. Please enter a valid password.")
+
+        Else
+            con.Open()
+            cmd.Connection = con
+            cmd.CommandText = "Update [User] SET [Password] = '" + newPass + "' WHERE Username = '" + Username + "';"
+            If cmd.ExecuteNonQuery() = 1 Then
+                MsgBox("Password changed Successfully. You will be taken back to the Login page now. ", 0, "Change Successful")
+                'Change to LoginPanel
+                UsernameTB.Text = "Username"
+                PasswordTB.Text = "Password"
+                LoginPanel.Visible = True
+                ChangePasswordPanel.Visible = False
+            Else
+                MsgBox("Password change failed. Try again. Contact developer if problem persists.", 0, "Change failed")
+                NewPassTB.Text = ""
+                ConfirmPassTB.Text = ""
+            End If
+        End If
+        con.Close()
+    End Sub
+
 
 
 

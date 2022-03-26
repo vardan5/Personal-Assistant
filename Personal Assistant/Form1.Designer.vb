@@ -24,19 +24,28 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.LoginPanel = New System.Windows.Forms.Panel()
-        Me.NewUserLL = New System.Windows.Forms.LinkLabel()
         Me.ForgotPassLL = New System.Windows.Forms.LinkLabel()
         Me.ResetB = New System.Windows.Forms.Button()
         Me.LoginB = New System.Windows.Forms.Button()
         Me.PasswordTB = New System.Windows.Forms.TextBox()
         Me.UsernameTB = New System.Windows.Forms.TextBox()
         Me.RightLogoPB = New System.Windows.Forms.PictureBox()
+        Me.NewUserLL = New System.Windows.Forms.LinkLabel()
         Me.MinimizePB = New System.Windows.Forms.PictureBox()
         Me.ClosePB = New System.Windows.Forms.PictureBox()
         Me.LogoPB = New System.Windows.Forms.PictureBox()
         Me.TitlePanel = New System.Windows.Forms.Panel()
         Me.TitleL = New System.Windows.Forms.Label()
         Me.InfoPanel = New System.Windows.Forms.Panel()
+        Me.ChangePasswordPanel = New System.Windows.Forms.Panel()
+        Me.BackToLoginB = New System.Windows.Forms.Button()
+        Me.BackToSecQuesB = New System.Windows.Forms.Button()
+        Me.NextToSecQuesB = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.NextToLoginB = New System.Windows.Forms.Button()
+        Me.ConfirmPassTB = New System.Windows.Forms.TextBox()
+        Me.NewPassTB = New System.Windows.Forms.TextBox()
+        Me.ChangePassL = New System.Windows.Forms.Label()
         Me.SecurityPanel = New System.Windows.Forms.Panel()
         Me.SecurityL = New System.Windows.Forms.Label()
         Me.SecLogo = New System.Windows.Forms.PictureBox()
@@ -45,31 +54,21 @@ Partial Class Form1
         Me.SecAnswerTB = New System.Windows.Forms.TextBox()
         Me.SecQuestionTB = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BackToLoginB = New System.Windows.Forms.Button()
-        Me.NextToSecQuesB = New System.Windows.Forms.Button()
         Me.EnterUsernameTB = New System.Windows.Forms.TextBox()
         Me.EnterUnameL = New System.Windows.Forms.Label()
         Me.EnterUsernamePanel = New System.Windows.Forms.Panel()
-        Me.ChangePasswordPanel = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ChangePassL = New System.Windows.Forms.Label()
-        Me.NewPassTB = New System.Windows.Forms.TextBox()
-        Me.ConfirmPassTB = New System.Windows.Forms.TextBox()
-        Me.NextToLoginB = New System.Windows.Forms.Button()
-        Me.BackToSecQuesB = New System.Windows.Forms.Button()
         Me.LoginPanel.SuspendLayout()
         CType(Me.RightLogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinimizePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClosePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitlePanel.SuspendLayout()
-        Me.InfoPanel.SuspendLayout()
+        Me.ChangePasswordPanel.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SecurityPanel.SuspendLayout()
         CType(Me.SecLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EnterUsernamePanel.SuspendLayout()
-        Me.ChangePasswordPanel.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LoginPanel
@@ -77,34 +76,23 @@ Partial Class Form1
         Me.LoginPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LoginPanel.BackColor = System.Drawing.Color.Indigo
-        Me.LoginPanel.Controls.Add(Me.NewUserLL)
         Me.LoginPanel.Controls.Add(Me.ForgotPassLL)
         Me.LoginPanel.Controls.Add(Me.ResetB)
         Me.LoginPanel.Controls.Add(Me.LoginB)
         Me.LoginPanel.Controls.Add(Me.PasswordTB)
         Me.LoginPanel.Controls.Add(Me.UsernameTB)
         Me.LoginPanel.Controls.Add(Me.RightLogoPB)
+        Me.LoginPanel.Controls.Add(Me.NewUserLL)
         Me.LoginPanel.Location = New System.Drawing.Point(427, 44)
         Me.LoginPanel.Name = "LoginPanel"
         Me.LoginPanel.Size = New System.Drawing.Size(344, 470)
         Me.LoginPanel.TabIndex = 0
         '
-        'NewUserLL
-        '
-        Me.NewUserLL.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.NewUserLL.AutoSize = True
-        Me.NewUserLL.Location = New System.Drawing.Point(72, 398)
-        Me.NewUserLL.Name = "NewUserLL"
-        Me.NewUserLL.Size = New System.Drawing.Size(184, 20)
-        Me.NewUserLL.TabIndex = 13
-        Me.NewUserLL.TabStop = True
-        Me.NewUserLL.Text = "New User? Create Account"
-        '
         'ForgotPassLL
         '
         Me.ForgotPassLL.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ForgotPassLL.AutoSize = True
-        Me.ForgotPassLL.Location = New System.Drawing.Point(109, 268)
+        Me.ForgotPassLL.Location = New System.Drawing.Point(109, 250)
         Me.ForgotPassLL.Name = "ForgotPassLL"
         Me.ForgotPassLL.Size = New System.Drawing.Size(118, 20)
         Me.ForgotPassLL.TabIndex = 12
@@ -115,7 +103,7 @@ Partial Class Form1
         'ResetB
         '
         Me.ResetB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ResetB.Location = New System.Drawing.Point(173, 319)
+        Me.ResetB.Location = New System.Drawing.Point(173, 301)
         Me.ResetB.Name = "ResetB"
         Me.ResetB.Size = New System.Drawing.Size(128, 29)
         Me.ResetB.TabIndex = 9
@@ -125,7 +113,7 @@ Partial Class Form1
         'LoginB
         '
         Me.LoginB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LoginB.Location = New System.Drawing.Point(42, 319)
+        Me.LoginB.Location = New System.Drawing.Point(42, 301)
         Me.LoginB.Name = "LoginB"
         Me.LoginB.Size = New System.Drawing.Size(128, 29)
         Me.LoginB.TabIndex = 10
@@ -135,7 +123,8 @@ Partial Class Form1
         'PasswordTB
         '
         Me.PasswordTB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PasswordTB.Location = New System.Drawing.Point(33, 241)
+        Me.PasswordTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PasswordTB.Location = New System.Drawing.Point(33, 223)
         Me.PasswordTB.Margin = New System.Windows.Forms.Padding(0)
         Me.PasswordTB.Name = "PasswordTB"
         Me.PasswordTB.Size = New System.Drawing.Size(274, 27)
@@ -147,7 +136,7 @@ Partial Class Form1
         '
         Me.UsernameTB.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.UsernameTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.UsernameTB.Location = New System.Drawing.Point(33, 199)
+        Me.UsernameTB.Location = New System.Drawing.Point(33, 181)
         Me.UsernameTB.Margin = New System.Windows.Forms.Padding(0)
         Me.UsernameTB.Name = "UsernameTB"
         Me.UsernameTB.Size = New System.Drawing.Size(274, 27)
@@ -159,12 +148,23 @@ Partial Class Form1
         '
         Me.RightLogoPB.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RightLogoPB.Image = CType(resources.GetObject("RightLogoPB.Image"), System.Drawing.Image)
-        Me.RightLogoPB.Location = New System.Drawing.Point(99, 21)
+        Me.RightLogoPB.Location = New System.Drawing.Point(99, 42)
         Me.RightLogoPB.Name = "RightLogoPB"
         Me.RightLogoPB.Size = New System.Drawing.Size(146, 96)
         Me.RightLogoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.RightLogoPB.TabIndex = 11
         Me.RightLogoPB.TabStop = False
+        '
+        'NewUserLL
+        '
+        Me.NewUserLL.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NewUserLL.AutoSize = True
+        Me.NewUserLL.Location = New System.Drawing.Point(72, 380)
+        Me.NewUserLL.Name = "NewUserLL"
+        Me.NewUserLL.Size = New System.Drawing.Size(184, 20)
+        Me.NewUserLL.TabIndex = 13
+        Me.NewUserLL.TabStop = True
+        Me.NewUserLL.Text = "New User? Create Account"
         '
         'MinimizePB
         '
@@ -231,19 +231,125 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.InfoPanel.AutoSize = True
         Me.InfoPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.InfoPanel.Controls.Add(Me.ChangePasswordPanel)
         Me.InfoPanel.Location = New System.Drawing.Point(3, 44)
         Me.InfoPanel.Name = "InfoPanel"
         Me.InfoPanel.Size = New System.Drawing.Size(418, 470)
         Me.InfoPanel.TabIndex = 3
         '
+        'ChangePasswordPanel
+        '
+        Me.ChangePasswordPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ChangePasswordPanel.BackColor = System.Drawing.Color.Indigo
+        Me.ChangePasswordPanel.Controls.Add(Me.BackToSecQuesB)
+        Me.ChangePasswordPanel.Controls.Add(Me.PictureBox2)
+        Me.ChangePasswordPanel.Controls.Add(Me.NextToLoginB)
+        Me.ChangePasswordPanel.Controls.Add(Me.ConfirmPassTB)
+        Me.ChangePasswordPanel.Controls.Add(Me.NewPassTB)
+        Me.ChangePasswordPanel.Controls.Add(Me.ChangePassL)
+        Me.ChangePasswordPanel.Location = New System.Drawing.Point(427, 44)
+        Me.ChangePasswordPanel.Name = "ChangePasswordPanel"
+        Me.ChangePasswordPanel.Size = New System.Drawing.Size(344, 470)
+        Me.ChangePasswordPanel.TabIndex = 14
+        Me.ChangePasswordPanel.Visible = False
+        '
+        'BackToLoginB
+        '
+        Me.BackToLoginB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BackToLoginB.Location = New System.Drawing.Point(40, 337)
+        Me.BackToLoginB.Name = "BackToLoginB"
+        Me.BackToLoginB.Size = New System.Drawing.Size(127, 29)
+        Me.BackToLoginB.TabIndex = 22
+        Me.BackToLoginB.Text = "Back"
+        Me.BackToLoginB.UseVisualStyleBackColor = True
+        '
+        'BackToSecQuesB
+        '
+        Me.BackToSecQuesB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BackToSecQuesB.Location = New System.Drawing.Point(43, 375)
+        Me.BackToSecQuesB.Name = "BackToSecQuesB"
+        Me.BackToSecQuesB.Size = New System.Drawing.Size(127, 29)
+        Me.BackToSecQuesB.TabIndex = 22
+        Me.BackToSecQuesB.Text = "Back"
+        Me.BackToSecQuesB.UseVisualStyleBackColor = True
+        '
+        'NextToSecQuesB
+        '
+        Me.NextToSecQuesB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NextToSecQuesB.Location = New System.Drawing.Point(173, 337)
+        Me.NextToSecQuesB.Name = "NextToSecQuesB"
+        Me.NextToSecQuesB.Size = New System.Drawing.Size(126, 29)
+        Me.NextToSecQuesB.TabIndex = 21
+        Me.NextToSecQuesB.Text = "Next"
+        Me.NextToSecQuesB.UseVisualStyleBackColor = True
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(99, 45)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(146, 96)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 19
+        Me.PictureBox2.TabStop = False
+        '
+        'NextToLoginB
+        '
+        Me.NextToLoginB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NextToLoginB.Location = New System.Drawing.Point(175, 375)
+        Me.NextToLoginB.Name = "NextToLoginB"
+        Me.NextToLoginB.Size = New System.Drawing.Size(127, 29)
+        Me.NextToLoginB.TabIndex = 21
+        Me.NextToLoginB.Text = "Next"
+        Me.NextToLoginB.UseVisualStyleBackColor = True
+        '
+        'ConfirmPassTB
+        '
+        Me.ConfirmPassTB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ConfirmPassTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ConfirmPassTB.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ConfirmPassTB.Location = New System.Drawing.Point(41, 314)
+        Me.ConfirmPassTB.Margin = New System.Windows.Forms.Padding(0)
+        Me.ConfirmPassTB.Name = "ConfirmPassTB"
+        Me.ConfirmPassTB.Size = New System.Drawing.Size(261, 34)
+        Me.ConfirmPassTB.TabIndex = 20
+        Me.ConfirmPassTB.Text = "Confirm Password"
+        Me.ConfirmPassTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'NewPassTB
+        '
+        Me.NewPassTB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NewPassTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.NewPassTB.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.NewPassTB.Location = New System.Drawing.Point(41, 265)
+        Me.NewPassTB.Margin = New System.Windows.Forms.Padding(0)
+        Me.NewPassTB.Name = "NewPassTB"
+        Me.NewPassTB.Size = New System.Drawing.Size(261, 34)
+        Me.NewPassTB.TabIndex = 20
+        Me.NewPassTB.Text = "New Password"
+        Me.NewPassTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ChangePassL
+        '
+        Me.ChangePassL.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ChangePassL.AutoSize = True
+        Me.ChangePassL.Font = New System.Drawing.Font("Segoe UI", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ChangePassL.ForeColor = System.Drawing.Color.White
+        Me.ChangePassL.Location = New System.Drawing.Point(28, 182)
+        Me.ChangePassL.Name = "ChangePassL"
+        Me.ChangePassL.Size = New System.Drawing.Size(292, 45)
+        Me.ChangePassL.TabIndex = 23
+        Me.ChangePassL.Text = "Change Password"
+        '
         'SecurityPanel
         '
         Me.SecurityPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SecurityPanel.BackColor = System.Drawing.Color.Indigo
         Me.SecurityPanel.Controls.Add(Me.SecurityL)
-        Me.SecurityPanel.Controls.Add(Me.SecLogo)
         Me.SecurityPanel.Controls.Add(Me.NextToNewPassB)
+        Me.SecurityPanel.Controls.Add(Me.PictureBox1)
         Me.SecurityPanel.Controls.Add(Me.BackToEnterUnameB)
         Me.SecurityPanel.Controls.Add(Me.SecAnswerTB)
         Me.SecurityPanel.Controls.Add(Me.SecQuestionTB)
@@ -259,7 +365,7 @@ Partial Class Form1
         Me.SecurityL.AutoSize = True
         Me.SecurityL.Font = New System.Drawing.Font("Segoe UI", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SecurityL.ForeColor = System.Drawing.Color.White
-        Me.SecurityL.Location = New System.Drawing.Point(22, 158)
+        Me.SecurityL.Location = New System.Drawing.Point(22, 206)
         Me.SecurityL.Name = "SecurityL"
         Me.SecurityL.Size = New System.Drawing.Size(295, 45)
         Me.SecurityL.TabIndex = 19
@@ -269,7 +375,7 @@ Partial Class Form1
         '
         Me.SecLogo.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.SecLogo.Image = CType(resources.GetObject("SecLogo.Image"), System.Drawing.Image)
-        Me.SecLogo.Location = New System.Drawing.Point(99, 21)
+        Me.SecLogo.Location = New System.Drawing.Point(99, 45)
         Me.SecLogo.Name = "SecLogo"
         Me.SecLogo.Size = New System.Drawing.Size(146, 96)
         Me.SecLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -279,7 +385,7 @@ Partial Class Form1
         'NextToNewPassB
         '
         Me.NextToNewPassB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.NextToNewPassB.Location = New System.Drawing.Point(174, 351)
+        Me.NextToNewPassB.Location = New System.Drawing.Point(174, 399)
         Me.NextToNewPassB.Name = "NextToNewPassB"
         Me.NextToNewPassB.Size = New System.Drawing.Size(128, 29)
         Me.NextToNewPassB.TabIndex = 16
@@ -289,7 +395,7 @@ Partial Class Form1
         'BackToEnterUnameB
         '
         Me.BackToEnterUnameB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BackToEnterUnameB.Location = New System.Drawing.Point(40, 351)
+        Me.BackToEnterUnameB.Location = New System.Drawing.Point(40, 399)
         Me.BackToEnterUnameB.Name = "BackToEnterUnameB"
         Me.BackToEnterUnameB.Size = New System.Drawing.Size(128, 29)
         Me.BackToEnterUnameB.TabIndex = 17
@@ -299,7 +405,8 @@ Partial Class Form1
         'SecAnswerTB
         '
         Me.SecAnswerTB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.SecAnswerTB.Location = New System.Drawing.Point(33, 290)
+        Me.SecAnswerTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.SecAnswerTB.Location = New System.Drawing.Point(33, 338)
         Me.SecAnswerTB.Margin = New System.Windows.Forms.Padding(0)
         Me.SecAnswerTB.Name = "SecAnswerTB"
         Me.SecAnswerTB.Size = New System.Drawing.Size(274, 27)
@@ -310,8 +417,8 @@ Partial Class Form1
         'SecQuestionTB
         '
         Me.SecQuestionTB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.SecQuestionTB.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.SecQuestionTB.Location = New System.Drawing.Point(33, 232)
+        Me.SecQuestionTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.SecQuestionTB.Location = New System.Drawing.Point(33, 280)
         Me.SecQuestionTB.Margin = New System.Windows.Forms.Padding(0)
         Me.SecQuestionTB.Multiline = True
         Me.SecQuestionTB.Name = "SecQuestionTB"
@@ -324,32 +431,12 @@ Partial Class Form1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(99, 21)
+        Me.PictureBox1.Location = New System.Drawing.Point(99, 42)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(146, 96)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 19
         Me.PictureBox1.TabStop = False
-        '
-        'BackToLoginB
-        '
-        Me.BackToLoginB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BackToLoginB.Location = New System.Drawing.Point(40, 333)
-        Me.BackToLoginB.Name = "BackToLoginB"
-        Me.BackToLoginB.Size = New System.Drawing.Size(127, 29)
-        Me.BackToLoginB.TabIndex = 22
-        Me.BackToLoginB.Text = "Back"
-        Me.BackToLoginB.UseVisualStyleBackColor = True
-        '
-        'NextToSecQuesB
-        '
-        Me.NextToSecQuesB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.NextToSecQuesB.Location = New System.Drawing.Point(174, 333)
-        Me.NextToSecQuesB.Name = "NextToSecQuesB"
-        Me.NextToSecQuesB.Size = New System.Drawing.Size(127, 29)
-        Me.NextToSecQuesB.TabIndex = 21
-        Me.NextToSecQuesB.Text = "Next"
-        Me.NextToSecQuesB.UseVisualStyleBackColor = True
         '
         'EnterUsernameTB
         '
@@ -380,102 +467,17 @@ Partial Class Form1
         '
         Me.EnterUsernamePanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.EnterUsernamePanel.BackColor = System.Drawing.Color.Indigo
         Me.EnterUsernamePanel.Controls.Add(Me.BackToLoginB)
+        Me.EnterUsernamePanel.Controls.Add(Me.SecLogo)
         Me.EnterUsernamePanel.Controls.Add(Me.NextToSecQuesB)
-        Me.EnterUsernamePanel.Controls.Add(Me.EnterUnameL)
         Me.EnterUsernamePanel.Controls.Add(Me.EnterUsernameTB)
-        Me.EnterUsernamePanel.Controls.Add(Me.PictureBox1)
+        Me.EnterUsernamePanel.Controls.Add(Me.EnterUnameL)
         Me.EnterUsernamePanel.Location = New System.Drawing.Point(427, 44)
         Me.EnterUsernamePanel.Name = "EnterUsernamePanel"
         Me.EnterUsernamePanel.Size = New System.Drawing.Size(344, 470)
         Me.EnterUsernamePanel.TabIndex = 2
         Me.EnterUsernamePanel.Visible = False
-        '
-        'ChangePasswordPanel
-        '
-        Me.ChangePasswordPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ChangePasswordPanel.BackColor = System.Drawing.Color.Indigo
-        Me.ChangePasswordPanel.Controls.Add(Me.BackToSecQuesB)
-        Me.ChangePasswordPanel.Controls.Add(Me.PictureBox2)
-        Me.ChangePasswordPanel.Controls.Add(Me.NextToLoginB)
-        Me.ChangePasswordPanel.Controls.Add(Me.ConfirmPassTB)
-        Me.ChangePasswordPanel.Controls.Add(Me.NewPassTB)
-        Me.ChangePasswordPanel.Controls.Add(Me.ChangePassL)
-        Me.ChangePasswordPanel.Location = New System.Drawing.Point(43, 0)
-        Me.ChangePasswordPanel.Name = "ChangePasswordPanel"
-        Me.ChangePasswordPanel.Size = New System.Drawing.Size(344, 470)
-        Me.ChangePasswordPanel.TabIndex = 14
-        Me.ChangePasswordPanel.Visible = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(98, 21)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(146, 96)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 19
-        Me.PictureBox2.TabStop = False
-        '
-        'ChangePassL
-        '
-        Me.ChangePassL.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ChangePassL.AutoSize = True
-        Me.ChangePassL.Font = New System.Drawing.Font("Segoe UI", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ChangePassL.ForeColor = System.Drawing.Color.White
-        Me.ChangePassL.Location = New System.Drawing.Point(28, 158)
-        Me.ChangePassL.Name = "ChangePassL"
-        Me.ChangePassL.Size = New System.Drawing.Size(292, 45)
-        Me.ChangePassL.TabIndex = 23
-        Me.ChangePassL.Text = "Change Password"
-        '
-        'NewPassTB
-        '
-        Me.NewPassTB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.NewPassTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.NewPassTB.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.NewPassTB.Location = New System.Drawing.Point(41, 241)
-        Me.NewPassTB.Margin = New System.Windows.Forms.Padding(0)
-        Me.NewPassTB.Name = "NewPassTB"
-        Me.NewPassTB.Size = New System.Drawing.Size(261, 34)
-        Me.NewPassTB.TabIndex = 20
-        Me.NewPassTB.Text = "New Password"
-        Me.NewPassTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'ConfirmPassTB
-        '
-        Me.ConfirmPassTB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ConfirmPassTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ConfirmPassTB.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ConfirmPassTB.Location = New System.Drawing.Point(41, 290)
-        Me.ConfirmPassTB.Margin = New System.Windows.Forms.Padding(0)
-        Me.ConfirmPassTB.Name = "ConfirmPassTB"
-        Me.ConfirmPassTB.Size = New System.Drawing.Size(261, 34)
-        Me.ConfirmPassTB.TabIndex = 20
-        Me.ConfirmPassTB.Text = "Confirm Password"
-        Me.ConfirmPassTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'NextToLoginB
-        '
-        Me.NextToLoginB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.NextToLoginB.Location = New System.Drawing.Point(175, 351)
-        Me.NextToLoginB.Name = "NextToLoginB"
-        Me.NextToLoginB.Size = New System.Drawing.Size(127, 29)
-        Me.NextToLoginB.TabIndex = 21
-        Me.NextToLoginB.Text = "Next"
-        Me.NextToLoginB.UseVisualStyleBackColor = True
-        '
-        'BackToSecQuesB
-        '
-        Me.BackToSecQuesB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BackToSecQuesB.Location = New System.Drawing.Point(41, 351)
-        Me.BackToSecQuesB.Name = "BackToSecQuesB"
-        Me.BackToSecQuesB.Size = New System.Drawing.Size(127, 29)
-        Me.BackToSecQuesB.TabIndex = 22
-        Me.BackToSecQuesB.Text = "Back"
-        Me.BackToSecQuesB.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -485,11 +487,12 @@ Partial Class Form1
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.Indigo
         Me.ClientSize = New System.Drawing.Size(774, 517)
-        Me.Controls.Add(Me.InfoPanel)
-        Me.Controls.Add(Me.TitlePanel)
-        Me.Controls.Add(Me.SecurityPanel)
         Me.Controls.Add(Me.LoginPanel)
         Me.Controls.Add(Me.EnterUsernamePanel)
+        Me.Controls.Add(Me.SecurityPanel)
+        Me.Controls.Add(Me.TitlePanel)
+        Me.Controls.Add(Me.InfoPanel)
+        Me.Controls.Add(Me.ChangePasswordPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MinimumSize = New System.Drawing.Size(774, 517)
         Me.Name = "Form1"
@@ -502,16 +505,15 @@ Partial Class Form1
         CType(Me.LogoPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
-        Me.InfoPanel.ResumeLayout(False)
+        Me.ChangePasswordPanel.ResumeLayout(False)
+        Me.ChangePasswordPanel.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SecurityPanel.ResumeLayout(False)
         Me.SecurityPanel.PerformLayout()
         CType(Me.SecLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EnterUsernamePanel.ResumeLayout(False)
         Me.EnterUsernamePanel.PerformLayout()
-        Me.ChangePasswordPanel.ResumeLayout(False)
-        Me.ChangePasswordPanel.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
