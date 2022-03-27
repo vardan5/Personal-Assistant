@@ -8,22 +8,12 @@ Public Class Form1
     'TitlePanel
 
     'For draging
-    Private Sub TitlePanel_MouseDown(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseDown
+    Private Sub TitlePanel_MouseDown(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseDown, LogoPB.MouseDown
         If e.Button = MouseButtons.Left Then
             loc = e.Location
         End If
     End Sub
-    Private Sub TitlePanel_MouseMove(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseMove
-        If e.Button = MouseButtons.Left Then
-            Me.Location += e.Location - loc
-        End If
-    End Sub
-    Private Sub LogoPB_MouseDown(sender As Object, e As MouseEventArgs) Handles LogoPB.MouseDown
-        If e.Button = MouseButtons.Left Then
-            loc = e.Location
-        End If
-    End Sub
-    Private Sub LogoPB_MouseMove(sender As Object, e As MouseEventArgs) Handles LogoPB.MouseMove
+    Private Sub TitlePanel_MouseMove(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseMove, LogoPB.MouseMove
         If e.Button = MouseButtons.Left Then
             Me.Location += e.Location - loc
         End If
@@ -36,9 +26,17 @@ Public Class Form1
     Private Sub MinimizePB_Click(sender As Object, e As EventArgs) Handles MinimizePB.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+    Private Sub Button_MouseEnter(sender As Object, e As EventArgs) Handles MinimizePB.MouseEnter, ClosePB.MouseEnter
+        'sender.BorderStyle = BorderStyle.FixedSingle
+        sender.BackColor = Color.FromArgb(200, 76, 0, 130)
+    End Sub
+    Private Sub Buttun_MouseLeave(sender As Object, e As EventArgs) Handles MinimizePB.MouseLeave, ClosePB.MouseLeave
+        'sender.BorderStyle = BorderStyle.None
+        sender.BackColor = Color.FromArgb(0, 255, 255, 255)
+    End Sub
 
 
-    'For Drawing grey border for all panels
+    'For Drawing grey border for all right-side panels
     Private Sub LoginPanel_Paint(sender As Object, e As PaintEventArgs) Handles LoginPanel.Paint, EnterUsernamePanel.Paint, SecurityPanel.Paint, ChangePasswordPanel.Paint
         ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 32, 32, 32), 3, ButtonBorderStyle.Solid)
     End Sub
@@ -48,14 +46,14 @@ Public Class Form1
     'LoginPanel
 
     'Username and Password Dissapearing Feature
-    Private Sub UsernameTB_Enter(sender As Object, e As EventArgs) Handles UsernameTB.Enter
-        If UsernameTB.Text = "Username" Then
-            UsernameTB.Text = ""
+    Private Sub UsernameTB_Enter(sender As Object, e As EventArgs) Handles UsernameTB.Enter, EnterUsernameTB.Enter
+        If sender.Text = "Username" Then
+            sender.Text = ""
         End If
     End Sub
-    Private Sub UsernameTB_Leave(sender As Object, e As EventArgs) Handles UsernameTB.Leave
-        If UsernameTB.Text = "" Then
-            UsernameTB.Text = "Username"
+    Private Sub UsernameTB_Leave(sender As Object, e As EventArgs) Handles UsernameTB.Leave, EnterUsernameTB.Leave
+        If sender.Text = "" Then
+            sender.Text = "Username"
         End If
     End Sub
     Private Sub PasswordTB_Enter(sender As Object, e As EventArgs) Handles PasswordTB.Enter
@@ -87,7 +85,7 @@ Public Class Form1
             'Load Dashboard Form here
 
         Else
-            MsgBox("Invalid Credentials", 0, "Login Failed")
+            MsgBox("Invalid Credentials. Login Failed.", 0, "Login Failed")
         End If
     End Sub
 
@@ -122,6 +120,8 @@ Public Class Form1
         EnterUsernamePanel.Visible = False
     End Sub
     Private Sub NextToSecQuesB_Click(sender As Object, e As EventArgs) Handles NextToSecQuesB.Click
+        UsernameTB.Text = "Username"
+        PasswordTB.Text = "Password"
         'Getting Username
         Username = EnterUsernameTB.Text
         'To set QuestionTB
@@ -151,6 +151,20 @@ Public Class Form1
 
     'SecurityPanel
 
+    'Security panel features
+    Private Sub SecAnswerTB_Enter(sender As Object, e As EventArgs) Handles SecAnswerTB.Enter
+        If sender.Text = "Answer" Then
+            sender.Text = ""
+        End If
+    End Sub
+
+
+    Private Sub SecAnswerTB_Leave(sender As Object, e As EventArgs) Handles SecAnswerTB.Leave
+        If sender.Text = "" Then
+            sender.Text = "Answer"
+        End If
+    End Sub
+
     'SecurityPanel Components
     Private Sub BackToEnterUnameB_Click(sender As Object, e As EventArgs) Handles BackToEnterUnameB.Click
         'EnterUsernameTB visible -> true
@@ -160,6 +174,7 @@ Public Class Form1
         SecurityPanel.Visible = False
     End Sub
     Private Sub NextToNewPassB_Click(sender As Object, e As EventArgs) Handles NextToNewPassB.Click
+        EnterUsernameTB.Text = ""
         'Check if Security Answer match with database
         Dim secAnswerInput As String = SecAnswerTB.Text
         con.Open()
@@ -182,23 +197,23 @@ Public Class Form1
 
     'ChangePasswordPanel Features
     Private Sub NewPassTB_Enter(sender As Object, e As EventArgs) Handles NewPassTB.Enter
-        If NewPassTB.Text = "New Password" Then
-            NewPassTB.Text = ""
+        If sender.Text = "New Password" Then
+            sender.Text = ""
         End If
     End Sub
     Private Sub NewPassTB_Leave(sender As Object, e As EventArgs) Handles NewPassTB.Leave
-        If NewPassTB.Text = "" Then
-            NewPassTB.Text = "New Password"
+        If sender.Text = "" Then
+            sender.Text = "New Password"
         End If
     End Sub
     Private Sub ConfirmPassTB_Enter(sender As Object, e As EventArgs) Handles ConfirmPassTB.Enter
-        If ConfirmPassTB.Text = "Confirm Password" Then
-            ConfirmPassTB.Text = ""
+        If sender.Text = "Confirm Password" Then
+            sender.Text = ""
         End If
     End Sub
     Private Sub ConfirmPassTB_Leave(sender As Object, e As EventArgs) Handles ConfirmPassTB.Leave
-        If ConfirmPassTB.Text = "" Then
-            ConfirmPassTB.Text = "Confirm Password"
+        If sender.Text = "" Then
+            sender.Text = "Confirm Password"
         End If
     End Sub
 
@@ -212,6 +227,7 @@ Public Class Form1
     End Sub
 
     Private Sub NextToLoginB_Click(sender As Object, e As EventArgs) Handles NextToLoginB.Click
+        SecAnswerTB.Text = ""
         Dim newPass As String = NewPassTB.Text
         If ConfirmPassTB.Text <> newPass Then
             MsgBox("The entered passwords do not match. Please try again.", 0, "Passwords do not match")
@@ -228,6 +244,8 @@ Public Class Form1
             If cmd.ExecuteNonQuery() = 1 Then
                 MsgBox("Password changed Successfully. You will be taken back to the Login page now. ", 0, "Change Successful")
                 'Change to LoginPanel
+                NewPassTB.Text = ""
+                ConfirmPassTB.Text = ""
                 UsernameTB.Text = "Username"
                 PasswordTB.Text = "Password"
                 LoginPanel.Visible = True
@@ -250,10 +268,6 @@ Public Class Form1
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\VB Project\Personal Assistant\Personal Assistant\Personal Assistant\PersonalAssistantDB.mdf;Integrated Security=True"
 
     End Sub
-
-
-
-
 
     'User Defined Functions and Subs
 
