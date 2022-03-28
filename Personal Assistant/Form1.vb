@@ -5,6 +5,7 @@ Public Class Form1
     Dim cmd As New SqlCommand
     Dim Username As String
 
+
     'TitlePanel
 
     'For draging
@@ -80,6 +81,9 @@ Public Class Form1
         If CheckLoginCredentials() Then
             MsgBox("Login Successful", 0, "Login Successful")
             'Load Dashboard Form here
+            Me.Hide()
+            Dashboard.Show()
+
 
         Else
             MsgBox("Invalid Credentials. Login Failed.", 0, "Login Failed")
@@ -260,7 +264,7 @@ Public Class Form1
 
 
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Setting Connection String
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\VB Project\Personal Assistant\Personal Assistant\Personal Assistant\PersonalAssistantDB.mdf;Integrated Security=True"
 
