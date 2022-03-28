@@ -8,12 +8,12 @@ Public Class Form1
     'TitlePanel
 
     'For draging
-    Private Sub TitlePanel_MouseDown(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseDown, LogoPB.MouseDown
+    Private Sub TitlePanel_MouseDown(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseDown, LogoPB.MouseDown, TitleL.MouseDown
         If e.Button = MouseButtons.Left Then
             loc = e.Location
         End If
     End Sub
-    Private Sub TitlePanel_MouseMove(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseMove, LogoPB.MouseMove
+    Private Sub TitlePanel_MouseMove(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseMove, LogoPB.MouseMove, TitleL.MouseMove
         If e.Button = MouseButtons.Left Then
             Me.Location += e.Location - loc
         End If
@@ -73,10 +73,7 @@ Public Class Form1
         'LoginPanel visible -> false
         'EnterUsernamePanel visible -> true
         LoginPanel.Visible = False
-        '  Username = InputBox("Enter the Username")
         EnterUsernamePanel.Visible = True
-
-
     End Sub
 
     Private Sub LoginB_Click(sender As Object, e As EventArgs) Handles LoginB.Click
@@ -98,7 +95,7 @@ Public Class Form1
 
         Dim numberOfUsers As Integer = findNumberOfUsers()
         If numberOfUsers = 0 Then
-
+            'Code for Adding new User
         Else
             MsgBox("Only 1 user can be enrolled as of now. For more info please contact the developer", 0, "User Limit Reached")
         End If
@@ -134,7 +131,7 @@ Public Class Form1
         Try
             SecQuestionTB.Text = dr("SecurityQuestion")
         Catch ex As InvalidOperationException
-            MsgBox("Try a different Username or create a new User.", 0, "Invalid Username")
+            MsgBox("Username not present in database. Try a different Username or create a new User.", 0, "Invalid Username")
             con.Close()
             Return
         End Try
@@ -269,6 +266,9 @@ Public Class Form1
 
     End Sub
 
+
+
+
     'User Defined Functions and Subs
 
     Private Function findNumberOfUsers() As Integer
@@ -305,6 +305,5 @@ Public Class Form1
         con.Close()
         Return Answer
     End Function
-
 
 End Class
