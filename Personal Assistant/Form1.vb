@@ -21,19 +21,12 @@ Public Class Form1
     End Sub
 
     'For TitlePanel Buttons
-    Private Sub ClosePB_Click(sender As Object, e As EventArgs) Handles ClosePB.Click
+    Private Sub CloseB_Click(sender As Object, e As EventArgs) Handles CloseB.Click
+        Me.DialogResult = DialogResult.No
         Me.Close()
     End Sub
-    Private Sub MinimizePB_Click(sender As Object, e As EventArgs) Handles MinimizePB.Click
+    Private Sub MinimizeB_Click(sender As Object, e As EventArgs) Handles MinimizeB.Click
         Me.WindowState = FormWindowState.Minimized
-    End Sub
-    Private Sub Button_MouseEnter(sender As Object, e As EventArgs) Handles MinimizePB.MouseEnter, ClosePB.MouseEnter
-        'sender.BorderStyle = BorderStyle.FixedSingle
-        sender.BackColor = Color.FromArgb(200, 76, 0, 130)
-    End Sub
-    Private Sub Buttun_MouseLeave(sender As Object, e As EventArgs) Handles MinimizePB.MouseLeave, ClosePB.MouseLeave
-        'sender.BorderStyle = BorderStyle.None
-        sender.BackColor = Color.FromArgb(0, 255, 255, 255)
     End Sub
 
 
@@ -80,10 +73,8 @@ Public Class Form1
     Private Sub LoginB_Click(sender As Object, e As EventArgs) Handles LoginB.Click
         If CheckLoginCredentials() Then
             MsgBox("Login Successful", 0, "Login Successful")
-            'Load Dashboard Form here
-            Me.Hide()
-            Dashboard.Show()
-
+            'Login Parameter of Dashboard set to true
+            Me.DialogResult = DialogResult.Yes
 
         Else
             MsgBox("Invalid Credentials. Login Failed.", 0, "Login Failed")
@@ -309,5 +300,6 @@ Public Class Form1
         con.Close()
         Return Answer
     End Function
+
 
 End Class

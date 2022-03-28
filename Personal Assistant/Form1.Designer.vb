@@ -31,11 +31,11 @@ Partial Class Form1
         Me.UsernameTB = New System.Windows.Forms.TextBox()
         Me.RightLogoPB = New System.Windows.Forms.PictureBox()
         Me.NewUserLL = New System.Windows.Forms.LinkLabel()
-        Me.MinimizePB = New System.Windows.Forms.PictureBox()
-        Me.ClosePB = New System.Windows.Forms.PictureBox()
         Me.LogoPB = New System.Windows.Forms.PictureBox()
         Me.TitlePanel = New System.Windows.Forms.Panel()
+        Me.MinimizeB = New System.Windows.Forms.Button()
         Me.TitleL = New System.Windows.Forms.Label()
+        Me.CloseB = New System.Windows.Forms.Button()
         Me.InfoPanel = New System.Windows.Forms.Panel()
         Me.ChangePasswordPanel = New System.Windows.Forms.Panel()
         Me.BackToSecQuesB = New System.Windows.Forms.Button()
@@ -59,8 +59,6 @@ Partial Class Form1
         Me.EnterUsernamePanel = New System.Windows.Forms.Panel()
         Me.LoginPanel.SuspendLayout()
         CType(Me.RightLogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MinimizePB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClosePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LogoPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitlePanel.SuspendLayout()
         Me.ChangePasswordPanel.SuspendLayout()
@@ -166,30 +164,6 @@ Partial Class Form1
         Me.NewUserLL.TabStop = True
         Me.NewUserLL.Text = "New User? Create Account"
         '
-        'MinimizePB
-        '
-        Me.MinimizePB.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MinimizePB.Image = CType(resources.GetObject("MinimizePB.Image"), System.Drawing.Image)
-        Me.MinimizePB.Location = New System.Drawing.Point(692, 3)
-        Me.MinimizePB.Name = "MinimizePB"
-        Me.MinimizePB.Size = New System.Drawing.Size(34, 32)
-        Me.MinimizePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.MinimizePB.TabIndex = 6
-        Me.MinimizePB.TabStop = False
-        '
-        'ClosePB
-        '
-        Me.ClosePB.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ClosePB.Image = CType(resources.GetObject("ClosePB.Image"), System.Drawing.Image)
-        Me.ClosePB.Location = New System.Drawing.Point(731, 3)
-        Me.ClosePB.Margin = New System.Windows.Forms.Padding(5)
-        Me.ClosePB.Name = "ClosePB"
-        Me.ClosePB.Padding = New System.Windows.Forms.Padding(1)
-        Me.ClosePB.Size = New System.Drawing.Size(34, 32)
-        Me.ClosePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ClosePB.TabIndex = 5
-        Me.ClosePB.TabStop = False
-        '
         'LogoPB
         '
         Me.LogoPB.Image = CType(resources.GetObject("LogoPB.Image"), System.Drawing.Image)
@@ -206,14 +180,28 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TitlePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.TitlePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.TitlePanel.Controls.Add(Me.MinimizeB)
         Me.TitlePanel.Controls.Add(Me.TitleL)
-        Me.TitlePanel.Controls.Add(Me.MinimizePB)
+        Me.TitlePanel.Controls.Add(Me.CloseB)
         Me.TitlePanel.Controls.Add(Me.LogoPB)
-        Me.TitlePanel.Controls.Add(Me.ClosePB)
         Me.TitlePanel.Location = New System.Drawing.Point(3, 3)
         Me.TitlePanel.Name = "TitlePanel"
         Me.TitlePanel.Size = New System.Drawing.Size(768, 38)
         Me.TitlePanel.TabIndex = 1
+        '
+        'MinimizeB
+        '
+        Me.MinimizeB.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MinimizeB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.MinB
+        Me.MinimizeB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MinimizeB.FlatAppearance.BorderSize = 0
+        Me.MinimizeB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.MinimizeB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MinimizeB.Location = New System.Drawing.Point(699, 7)
+        Me.MinimizeB.Name = "MinimizeB"
+        Me.MinimizeB.Size = New System.Drawing.Size(32, 24)
+        Me.MinimizeB.TabIndex = 1
+        Me.MinimizeB.UseVisualStyleBackColor = True
         '
         'TitleL
         '
@@ -225,6 +213,20 @@ Partial Class Form1
         Me.TitleL.Size = New System.Drawing.Size(46, 20)
         Me.TitleL.TabIndex = 0
         Me.TitleL.Text = "Login"
+        '
+        'CloseB
+        '
+        Me.CloseB.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CloseB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.CloseB
+        Me.CloseB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.CloseB.FlatAppearance.BorderSize = 0
+        Me.CloseB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.CloseB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CloseB.Location = New System.Drawing.Point(733, 7)
+        Me.CloseB.Name = "CloseB"
+        Me.CloseB.Size = New System.Drawing.Size(32, 24)
+        Me.CloseB.TabIndex = 0
+        Me.CloseB.UseVisualStyleBackColor = True
         '
         'InfoPanel
         '
@@ -502,8 +504,6 @@ Partial Class Form1
         Me.LoginPanel.ResumeLayout(False)
         Me.LoginPanel.PerformLayout()
         CType(Me.RightLogoPB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MinimizePB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClosePB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LogoPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
@@ -521,8 +521,6 @@ Partial Class Form1
 
     End Sub
     Friend WithEvents LogoPB As PictureBox
-    Friend WithEvents MinimizePB As PictureBox
-    Friend WithEvents ClosePB As PictureBox
     Friend WithEvents LoginPanel As Panel
     Friend WithEvents NewUserLL As LinkLabel
     Friend WithEvents ForgotPassLL As LinkLabel
@@ -554,4 +552,6 @@ Partial Class Form1
     Friend WithEvents ConfirmPassTB As TextBox
     Friend WithEvents NewPassTB As TextBox
     Friend WithEvents ChangePassL As Label
+    Friend WithEvents CloseB As Button
+    Friend WithEvents MinimizeB As Button
 End Class
