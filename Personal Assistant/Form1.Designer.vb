@@ -500,6 +500,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MinimumSize = New System.Drawing.Size(774, 517)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Personal Assistant Login"
         Me.LoginPanel.ResumeLayout(False)
         Me.LoginPanel.PerformLayout()

@@ -42,5 +42,12 @@
         End If
     End Sub
 
+    Private Sub FinanceManagerNavB_Click(sender As Object, e As EventArgs) Handles FinanceManagerNavB.Click
+
+    End Sub
+
+    Private Sub TaskManagerNavB_Click(sender As Object, e As EventArgs) Handles TaskManagerNavB.Click
+
+    End Sub
 
 End Class
