@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.LoginPanel = New System.Windows.Forms.Panel()
         Me.ForgotPassLL = New System.Windows.Forms.LinkLabel()
         Me.ResetB = New System.Windows.Forms.Button()
@@ -93,7 +92,7 @@ Partial Class Form1
         Me.ForgotPassLL.Location = New System.Drawing.Point(109, 250)
         Me.ForgotPassLL.Name = "ForgotPassLL"
         Me.ForgotPassLL.Size = New System.Drawing.Size(118, 20)
-        Me.ForgotPassLL.TabIndex = 12
+        Me.ForgotPassLL.TabIndex = 2
         Me.ForgotPassLL.TabStop = True
         Me.ForgotPassLL.Text = "forgot password"
         Me.ForgotPassLL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -104,7 +103,7 @@ Partial Class Form1
         Me.ResetB.Location = New System.Drawing.Point(173, 301)
         Me.ResetB.Name = "ResetB"
         Me.ResetB.Size = New System.Drawing.Size(128, 29)
-        Me.ResetB.TabIndex = 9
+        Me.ResetB.TabIndex = 4
         Me.ResetB.Text = "Reset"
         Me.ResetB.UseVisualStyleBackColor = True
         '
@@ -114,7 +113,7 @@ Partial Class Form1
         Me.LoginB.Location = New System.Drawing.Point(42, 301)
         Me.LoginB.Name = "LoginB"
         Me.LoginB.Size = New System.Drawing.Size(128, 29)
-        Me.LoginB.TabIndex = 10
+        Me.LoginB.TabIndex = 3
         Me.LoginB.Text = "Login"
         Me.LoginB.UseVisualStyleBackColor = True
         '
@@ -126,7 +125,7 @@ Partial Class Form1
         Me.PasswordTB.Margin = New System.Windows.Forms.Padding(0)
         Me.PasswordTB.Name = "PasswordTB"
         Me.PasswordTB.Size = New System.Drawing.Size(274, 20)
-        Me.PasswordTB.TabIndex = 7
+        Me.PasswordTB.TabIndex = 1
         Me.PasswordTB.Text = "Password"
         Me.PasswordTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -138,14 +137,14 @@ Partial Class Form1
         Me.UsernameTB.Margin = New System.Windows.Forms.Padding(0)
         Me.UsernameTB.Name = "UsernameTB"
         Me.UsernameTB.Size = New System.Drawing.Size(274, 27)
-        Me.UsernameTB.TabIndex = 8
+        Me.UsernameTB.TabIndex = 0
         Me.UsernameTB.Text = "Username"
         Me.UsernameTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'RightLogoPB
         '
         Me.RightLogoPB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.RightLogoPB.Image = CType(resources.GetObject("RightLogoPB.Image"), System.Drawing.Image)
+        Me.RightLogoPB.Image = Global.Personal_Assistant.My.Resources.Resources.logo
         Me.RightLogoPB.Location = New System.Drawing.Point(99, 42)
         Me.RightLogoPB.Name = "RightLogoPB"
         Me.RightLogoPB.Size = New System.Drawing.Size(146, 96)
@@ -160,13 +159,13 @@ Partial Class Form1
         Me.NewUserLL.Location = New System.Drawing.Point(72, 380)
         Me.NewUserLL.Name = "NewUserLL"
         Me.NewUserLL.Size = New System.Drawing.Size(184, 20)
-        Me.NewUserLL.TabIndex = 13
+        Me.NewUserLL.TabIndex = 5
         Me.NewUserLL.TabStop = True
         Me.NewUserLL.Text = "New User? Create Account"
         '
         'LogoPB
         '
-        Me.LogoPB.Image = CType(resources.GetObject("LogoPB.Image"), System.Drawing.Image)
+        Me.LogoPB.Image = Global.Personal_Assistant.My.Resources.Resources.logo
         Me.LogoPB.Location = New System.Drawing.Point(3, 3)
         Me.LogoPB.Name = "LogoPB"
         Me.LogoPB.Size = New System.Drawing.Size(43, 32)
@@ -200,7 +199,7 @@ Partial Class Form1
         Me.MinimizeB.Location = New System.Drawing.Point(699, 7)
         Me.MinimizeB.Name = "MinimizeB"
         Me.MinimizeB.Size = New System.Drawing.Size(32, 24)
-        Me.MinimizeB.TabIndex = 1
+        Me.MinimizeB.TabIndex = 7
         Me.MinimizeB.UseVisualStyleBackColor = True
         '
         'TitleL
@@ -225,7 +224,7 @@ Partial Class Form1
         Me.CloseB.Location = New System.Drawing.Point(733, 7)
         Me.CloseB.Name = "CloseB"
         Me.CloseB.Size = New System.Drawing.Size(32, 24)
-        Me.CloseB.TabIndex = 0
+        Me.CloseB.TabIndex = 6
         Me.CloseB.UseVisualStyleBackColor = True
         '
         'InfoPanel
@@ -270,7 +269,7 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Image = Global.Personal_Assistant.My.Resources.Resources.logo
         Me.PictureBox2.Location = New System.Drawing.Point(99, 45)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(146, 96)
@@ -388,7 +387,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Image = Global.Personal_Assistant.My.Resources.Resources.logo
         Me.PictureBox1.Location = New System.Drawing.Point(99, 42)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(146, 96)
@@ -434,7 +433,7 @@ Partial Class Form1
         'SecLogo
         '
         Me.SecLogo.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.SecLogo.Image = CType(resources.GetObject("SecLogo.Image"), System.Drawing.Image)
+        Me.SecLogo.Image = Global.Personal_Assistant.My.Resources.Resources.logo
         Me.SecLogo.Location = New System.Drawing.Point(99, 45)
         Me.SecLogo.Name = "SecLogo"
         Me.SecLogo.Size = New System.Drawing.Size(146, 96)

@@ -75,6 +75,7 @@ Public Class Form1
             MsgBox("Login Successful", 0, "Login Successful")
             'Login Parameter of Dashboard set to true
             Me.DialogResult = DialogResult.Yes
+            Me.Close()
 
         Else
             MsgBox("Invalid Credentials. Login Failed.", 0, "Login Failed")

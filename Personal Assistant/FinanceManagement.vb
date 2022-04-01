@@ -5,7 +5,10 @@
 
     End Sub
 
+    Private Sub BasePanel_SizeChanged(sender As Object, e As EventArgs) Handles BasePanel.SizeChanged
+        Dim width As Integer = BasePanel.Width
+        'MsgBox("Size changed")
+        ButtonPanel.Width = width * 0.67
 
-
-
+    End Sub
 End Class

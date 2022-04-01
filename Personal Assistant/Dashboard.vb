@@ -36,10 +36,15 @@
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.WindowState = FormWindowState.Maximized
+        Me.Enabled = False
         Form1.ShowDialog()
         If Form1.DialogResult = DialogResult.No Then
             Application.Exit()
         End If
+        If Form1.DialogResult = DialogResult.Yes Then
+            Me.Enabled = True
+        End If
+
     End Sub
 
     Private Sub FinanceManagerNavB_Click(sender As Object, e As EventArgs) Handles FinanceManagerNavB.Click
