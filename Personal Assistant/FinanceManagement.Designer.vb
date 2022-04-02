@@ -30,11 +30,11 @@ Partial Class FinanceManagement
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.AddTransactionB = New System.Windows.Forms.Button()
         Me.ViewTransactionB = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ViewAccountsB = New System.Windows.Forms.Button()
+        Me.SoonB = New System.Windows.Forms.Button()
         Me.AddTransactionL = New System.Windows.Forms.Label()
         Me.ViewTransactionL = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ViewAccountsL = New System.Windows.Forms.Label()
         Me.AnimationPanel = New System.Windows.Forms.Panel()
         Me.TitlePanel.SuspendLayout()
         Me.BasePanel.SuspendLayout()
@@ -106,11 +106,11 @@ Partial Class FinanceManagement
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.AddTransactionB, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.ViewTransactionB, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button3, 3, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.ViewAccountsB, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.SoonB, 3, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.AddTransactionL, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.ViewTransactionL, 3, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.ViewAccountsL, 1, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -157,40 +157,40 @@ Partial Class FinanceManagement
         Me.ViewTransactionB.TabIndex = 2
         Me.ViewTransactionB.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ViewAccountsB
         '
-        Me.Button2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ViewAccountsB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.ViewAccountsB1
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.Button2.FlatAppearance.BorderSize = 2
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(93, 334)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(162, 157)
-        Me.Button2.TabIndex = 2
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ViewAccountsB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.ViewAccountsB1
+        Me.ViewAccountsB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ViewAccountsB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.ViewAccountsB.FlatAppearance.BorderSize = 2
+        Me.ViewAccountsB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.ViewAccountsB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ViewAccountsB.Location = New System.Drawing.Point(93, 334)
+        Me.ViewAccountsB.Name = "ViewAccountsB"
+        Me.ViewAccountsB.Size = New System.Drawing.Size(162, 157)
+        Me.ViewAccountsB.TabIndex = 2
+        Me.ViewAccountsB.UseVisualStyleBackColor = True
         '
-        'Button3
+        'SoonB
         '
-        Me.Button3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.SoonB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.Button3.FlatAppearance.BorderSize = 2
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(345, 334)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(162, 157)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "COMING SOON"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.SoonB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatAppearance.BorderSize = 2
+        Me.SoonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SoonB.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.SoonB.ForeColor = System.Drawing.Color.White
+        Me.SoonB.Location = New System.Drawing.Point(345, 334)
+        Me.SoonB.Name = "SoonB"
+        Me.SoonB.Size = New System.Drawing.Size(162, 157)
+        Me.SoonB.TabIndex = 2
+        Me.SoonB.Text = "COMING SOON"
+        Me.SoonB.UseVisualStyleBackColor = True
         '
         'AddTransactionL
         '
@@ -220,23 +220,23 @@ Partial Class FinanceManagement
         Me.ViewTransactionL.Text = "View Transaction"
         Me.ViewTransactionL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label1
+        'ViewAccountsL
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.Indigo
-        Me.Label1.Location = New System.Drawing.Point(93, 494)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(162, 70)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "View Accounts"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ViewAccountsL.AutoSize = True
+        Me.ViewAccountsL.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ViewAccountsL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ViewAccountsL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ViewAccountsL.ForeColor = System.Drawing.Color.Indigo
+        Me.ViewAccountsL.Location = New System.Drawing.Point(93, 494)
+        Me.ViewAccountsL.Name = "ViewAccountsL"
+        Me.ViewAccountsL.Size = New System.Drawing.Size(162, 70)
+        Me.ViewAccountsL.TabIndex = 5
+        Me.ViewAccountsL.Text = "View Accounts"
+        Me.ViewAccountsL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'AnimationPanel
         '
-        Me.AnimationPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.AnimationPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.AnimationPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AnimationPanel.Location = New System.Drawing.Point(0, 0)
         Me.AnimationPanel.Name = "AnimationPanel"
@@ -247,7 +247,6 @@ Partial Class FinanceManagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.Indigo
         Me.Controls.Add(Me.BasePanel)
         Me.Controls.Add(Me.TitlePanel)
@@ -271,10 +270,10 @@ Partial Class FinanceManagement
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents AddTransactionB As Button
     Friend WithEvents ViewTransactionB As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents ViewAccountsB As Button
+    Friend WithEvents SoonB As Button
     Friend WithEvents AddTransactionL As Label
     Friend WithEvents ViewTransactionL As Label
     Friend WithEvents AnimationPanel As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents ViewAccountsL As Label
 End Class

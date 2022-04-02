@@ -23,56 +23,46 @@ Partial Class Home
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TitlePanel = New System.Windows.Forms.Panel()
-        Me.FinManagementL = New System.Windows.Forms.Label()
+        Me.HomeL = New System.Windows.Forms.Label()
         Me.BasePanel = New System.Windows.Forms.Panel()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.ButtonPanel = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.AddTransactionB = New System.Windows.Forms.Button()
-        Me.ViewTransactionB = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Splitter2 = New System.Windows.Forms.Splitter()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.AddTransactionL = New System.Windows.Forms.Label()
-        Me.ViewTransactionL = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.FinanceManagementB = New System.Windows.Forms.Button()
+        Me.TaskManagementB = New System.Windows.Forms.Button()
+        Me.HealthMonitoring = New System.Windows.Forms.Button()
+        Me.SoonB = New System.Windows.Forms.Button()
+        Me.FinanceManagementL = New System.Windows.Forms.Label()
+        Me.TaskManagementL = New System.Windows.Forms.Label()
+        Me.HealthMonitoringL = New System.Windows.Forms.Label()
+        Me.AnimationPanel = New System.Windows.Forms.Panel()
         Me.TitlePanel.SuspendLayout()
         Me.BasePanel.SuspendLayout()
+        Me.ButtonPanel.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TitlePanel
         '
         Me.TitlePanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TitlePanel.Controls.Add(Me.FinManagementL)
-        Me.TitlePanel.Location = New System.Drawing.Point(-404, -256)
+        Me.TitlePanel.Controls.Add(Me.HomeL)
+        Me.TitlePanel.Location = New System.Drawing.Point(3, 3)
         Me.TitlePanel.Name = "TitlePanel"
-        Me.TitlePanel.Size = New System.Drawing.Size(959, 71)
-        Me.TitlePanel.TabIndex = 4
+        Me.TitlePanel.Size = New System.Drawing.Size(959, 69)
+        Me.TitlePanel.TabIndex = 3
         '
-        'FinManagementL
+        'HomeL
         '
-        Me.FinManagementL.AutoSize = True
-        Me.FinManagementL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.FinManagementL.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.FinManagementL.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.FinManagementL.Location = New System.Drawing.Point(22, 10)
-        Me.FinManagementL.Name = "FinManagementL"
-        Me.FinManagementL.Size = New System.Drawing.Size(405, 54)
-        Me.FinManagementL.TabIndex = 0
-        Me.FinManagementL.Text = "Finance Management"
+        Me.HomeL.AutoSize = True
+        Me.HomeL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HomeL.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.HomeL.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.HomeL.Location = New System.Drawing.Point(22, 10)
+        Me.HomeL.Name = "HomeL"
+        Me.HomeL.Size = New System.Drawing.Size(216, 54)
+        Me.HomeL.TabIndex = 0
+        Me.HomeL.Text = "Dashboard"
         '
         'BasePanel
         '
@@ -81,26 +71,30 @@ Partial Class Home
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BasePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.BasePanel.Controls.Add(Me.Splitter1)
-        Me.BasePanel.Location = New System.Drawing.Point(0, 0)
+        Me.BasePanel.Controls.Add(Me.ButtonPanel)
+        Me.BasePanel.Controls.Add(Me.AnimationPanel)
+        Me.BasePanel.Location = New System.Drawing.Point(3, 80)
         Me.BasePanel.Name = "BasePanel"
-        Me.BasePanel.Size = New System.Drawing.Size(200, 100)
-        Me.BasePanel.TabIndex = 0
+        Me.BasePanel.Size = New System.Drawing.Size(959, 585)
+        Me.BasePanel.TabIndex = 4
         '
         'Splitter1
         '
         Me.Splitter1.BackColor = System.Drawing.Color.Indigo
-        Me.Splitter1.Location = New System.Drawing.Point(0, 0)
+        Me.Splitter1.Location = New System.Drawing.Point(600, 0)
         Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(8, 100)
+        Me.Splitter1.Size = New System.Drawing.Size(8, 585)
         Me.Splitter1.TabIndex = 5
         Me.Splitter1.TabStop = False
         '
         'ButtonPanel
         '
+        Me.ButtonPanel.Controls.Add(Me.TableLayoutPanel1)
+        Me.ButtonPanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.ButtonPanel.Location = New System.Drawing.Point(0, 0)
         Me.ButtonPanel.Name = "ButtonPanel"
-        Me.ButtonPanel.Size = New System.Drawing.Size(200, 100)
-        Me.ButtonPanel.TabIndex = 0
+        Me.ButtonPanel.Size = New System.Drawing.Size(600, 585)
+        Me.ButtonPanel.TabIndex = 4
         '
         'TableLayoutPanel1
         '
@@ -110,283 +104,177 @@ Partial Class Home
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.AddTransactionB, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.FinanceManagementB, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TaskManagementB, 3, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.HealthMonitoring, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.SoonB, 3, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.FinanceManagementL, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.TaskManagementL, 3, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.HealthMonitoringL, 1, 4)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(200, 100)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.TableLayoutPanel1.RowCount = 5
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(600, 585)
+        Me.TableLayoutPanel1.TabIndex = 1
         '
-        'AddTransactionB
+        'FinanceManagementB
         '
-        Me.AddTransactionB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.FinanceManagementB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AddTransactionB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.AddTransactionB
-        Me.AddTransactionB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.AddTransactionB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.AddTransactionB.FlatAppearance.BorderSize = 2
-        Me.AddTransactionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
-        Me.AddTransactionB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AddTransactionB.Location = New System.Drawing.Point(33, 23)
-        Me.AddTransactionB.Name = "AddTransactionB"
-        Me.AddTransactionB.Size = New System.Drawing.Size(50, 74)
-        Me.AddTransactionB.TabIndex = 2
-        Me.AddTransactionB.UseVisualStyleBackColor = True
+        Me.FinanceManagementB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.FinanceB
+        Me.FinanceManagementB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.FinanceManagementB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.FinanceManagementB.FlatAppearance.BorderSize = 2
+        Me.FinanceManagementB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.FinanceManagementB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.FinanceManagementB.Location = New System.Drawing.Point(93, 90)
+        Me.FinanceManagementB.Name = "FinanceManagementB"
+        Me.FinanceManagementB.Size = New System.Drawing.Size(162, 157)
+        Me.FinanceManagementB.TabIndex = 2
+        Me.FinanceManagementB.UseVisualStyleBackColor = True
         '
-        'ViewTransactionB
+        'TaskManagementB
         '
-        Me.ViewTransactionB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.TaskManagementB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ViewTransactionB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.ViewTransactionB
-        Me.ViewTransactionB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ViewTransactionB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.ViewTransactionB.FlatAppearance.BorderSize = 2
-        Me.ViewTransactionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
-        Me.ViewTransactionB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ViewTransactionB.Location = New System.Drawing.Point(117, 3)
-        Me.ViewTransactionB.Name = "ViewTransactionB"
-        Me.ViewTransactionB.Size = New System.Drawing.Size(50, 157)
-        Me.ViewTransactionB.TabIndex = 2
-        Me.ViewTransactionB.UseVisualStyleBackColor = True
+        Me.TaskManagementB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.TaskB1
+        Me.TaskManagementB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.TaskManagementB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.TaskManagementB.FlatAppearance.BorderSize = 2
+        Me.TaskManagementB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.TaskManagementB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TaskManagementB.Location = New System.Drawing.Point(345, 90)
+        Me.TaskManagementB.Name = "TaskManagementB"
+        Me.TaskManagementB.Size = New System.Drawing.Size(162, 157)
+        Me.TaskManagementB.TabIndex = 2
+        Me.TaskManagementB.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'HealthMonitoring
         '
-        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(3, 1)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(959, 71)
-        Me.Panel1.TabIndex = 4
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(405, 54)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Finance Management"
-        '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.HealthMonitoring.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Splitter2)
-        Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Location = New System.Drawing.Point(3, 78)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(959, 585)
-        Me.Panel2.TabIndex = 5
+        Me.HealthMonitoring.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.HealthB
+        Me.HealthMonitoring.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.HealthMonitoring.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.HealthMonitoring.FlatAppearance.BorderSize = 2
+        Me.HealthMonitoring.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.HealthMonitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HealthMonitoring.Location = New System.Drawing.Point(93, 334)
+        Me.HealthMonitoring.Name = "HealthMonitoring"
+        Me.HealthMonitoring.Size = New System.Drawing.Size(162, 157)
+        Me.HealthMonitoring.TabIndex = 2
+        Me.HealthMonitoring.UseVisualStyleBackColor = True
         '
-        'Splitter2
+        'SoonB
         '
-        Me.Splitter2.BackColor = System.Drawing.Color.Indigo
-        Me.Splitter2.Location = New System.Drawing.Point(605, 0)
-        Me.Splitter2.Name = "Splitter2"
-        Me.Splitter2.Size = New System.Drawing.Size(8, 585)
-        Me.Splitter2.TabIndex = 5
-        Me.Splitter2.TabStop = False
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.TableLayoutPanel2)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(605, 585)
-        Me.Panel3.TabIndex = 4
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 5
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button2, 3, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button3, 1, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button4, 3, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.AddTransactionL, 1, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.ViewTransactionL, 3, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 1, 4)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 5
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(605, 585)
-        Me.TableLayoutPanel2.TabIndex = 1
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.SoonB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.AddTransactionB
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.Button1.FlatAppearance.BorderSize = 2
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(93, 90)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(163, 157)
-        Me.Button1.TabIndex = 2
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.SoonB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatAppearance.BorderSize = 2
+        Me.SoonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SoonB.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.SoonB.ForeColor = System.Drawing.Color.White
+        Me.SoonB.Location = New System.Drawing.Point(345, 334)
+        Me.SoonB.Name = "SoonB"
+        Me.SoonB.Size = New System.Drawing.Size(162, 157)
+        Me.SoonB.TabIndex = 2
+        Me.SoonB.Text = "COMING SOON"
+        Me.SoonB.UseVisualStyleBackColor = True
         '
-        'Button2
+        'FinanceManagementL
         '
-        Me.Button2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.ViewTransactionB
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.Button2.FlatAppearance.BorderSize = 2
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(346, 90)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(163, 157)
-        Me.Button2.TabIndex = 2
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.FinanceManagementL.AutoSize = True
+        Me.FinanceManagementL.Dock = System.Windows.Forms.DockStyle.Top
+        Me.FinanceManagementL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.FinanceManagementL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.FinanceManagementL.ForeColor = System.Drawing.Color.Indigo
+        Me.FinanceManagementL.Location = New System.Drawing.Point(93, 250)
+        Me.FinanceManagementL.Name = "FinanceManagementL"
+        Me.FinanceManagementL.Size = New System.Drawing.Size(162, 70)
+        Me.FinanceManagementL.TabIndex = 3
+        Me.FinanceManagementL.Text = "Finance Management"
+        Me.FinanceManagementL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button3
+        'TaskManagementL
         '
-        Me.Button3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.ViewAccountsB1
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.Button3.FlatAppearance.BorderSize = 2
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(93, 334)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(163, 157)
-        Me.Button3.TabIndex = 2
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.TaskManagementL.AutoSize = True
+        Me.TaskManagementL.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TaskManagementL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TaskManagementL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TaskManagementL.ForeColor = System.Drawing.Color.Indigo
+        Me.TaskManagementL.Location = New System.Drawing.Point(345, 250)
+        Me.TaskManagementL.Name = "TaskManagementL"
+        Me.TaskManagementL.Size = New System.Drawing.Size(162, 70)
+        Me.TaskManagementL.TabIndex = 4
+        Me.TaskManagementL.Text = "Task Management"
+        Me.TaskManagementL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button4
+        'HealthMonitoringL
         '
-        Me.Button4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
-        Me.Button4.FlatAppearance.BorderSize = 2
-        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(346, 334)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(163, 157)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "COMING SOON"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.HealthMonitoringL.AutoSize = True
+        Me.HealthMonitoringL.Dock = System.Windows.Forms.DockStyle.Top
+        Me.HealthMonitoringL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HealthMonitoringL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.HealthMonitoringL.ForeColor = System.Drawing.Color.Indigo
+        Me.HealthMonitoringL.Location = New System.Drawing.Point(93, 494)
+        Me.HealthMonitoringL.Name = "HealthMonitoringL"
+        Me.HealthMonitoringL.Size = New System.Drawing.Size(162, 70)
+        Me.HealthMonitoringL.TabIndex = 5
+        Me.HealthMonitoringL.Text = "Health Monitoring"
+        Me.HealthMonitoringL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'AddTransactionL
+        'AnimationPanel
         '
-        Me.AddTransactionL.AutoSize = True
-        Me.AddTransactionL.Dock = System.Windows.Forms.DockStyle.Top
-        Me.AddTransactionL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AddTransactionL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AddTransactionL.ForeColor = System.Drawing.Color.Indigo
-        Me.AddTransactionL.Location = New System.Drawing.Point(93, 250)
-        Me.AddTransactionL.Name = "AddTransactionL"
-        Me.AddTransactionL.Size = New System.Drawing.Size(163, 70)
-        Me.AddTransactionL.TabIndex = 3
-        Me.AddTransactionL.Text = "Add Transaction"
-        Me.AddTransactionL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ViewTransactionL
-        '
-        Me.ViewTransactionL.AutoSize = True
-        Me.ViewTransactionL.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ViewTransactionL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ViewTransactionL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ViewTransactionL.ForeColor = System.Drawing.Color.Indigo
-        Me.ViewTransactionL.Location = New System.Drawing.Point(346, 250)
-        Me.ViewTransactionL.Name = "ViewTransactionL"
-        Me.ViewTransactionL.Size = New System.Drawing.Size(163, 70)
-        Me.ViewTransactionL.TabIndex = 4
-        Me.ViewTransactionL.Text = "View Transaction"
-        Me.ViewTransactionL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.Color.Indigo
-        Me.Label2.Location = New System.Drawing.Point(93, 494)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(163, 70)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "View Accounts"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.AnimationPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.AnimationPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AnimationPanel.Location = New System.Drawing.Point(0, 0)
+        Me.AnimationPanel.Name = "AnimationPanel"
+        Me.AnimationPanel.Size = New System.Drawing.Size(959, 585)
+        Me.AnimationPanel.TabIndex = 4
         '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Indigo
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.TitlePanel)
+        Me.Controls.Add(Me.BasePanel)
+        Me.DoubleBuffered = True
         Me.Name = "Home"
         Me.Size = New System.Drawing.Size(965, 665)
         Me.TitlePanel.ResumeLayout(False)
         Me.TitlePanel.PerformLayout()
         Me.BasePanel.ResumeLayout(False)
+        Me.ButtonPanel.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TitlePanel As Panel
-    Friend WithEvents FinManagementL As Label
+    Friend WithEvents HomeL As Label
     Friend WithEvents BasePanel As Panel
     Friend WithEvents Splitter1 As Splitter
     Friend WithEvents ButtonPanel As Panel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents AddTransactionB As Button
-    Friend WithEvents ViewTransactionB As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Splitter2 As Splitter
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents AddTransactionL As Label
-    Friend WithEvents ViewTransactionL As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents FinanceManagementB As Button
+    Friend WithEvents TaskManagementB As Button
+    Friend WithEvents HealthMonitoring As Button
+    Friend WithEvents SoonB As Button
+    Friend WithEvents FinanceManagementL As Label
+    Friend WithEvents TaskManagementL As Label
+    Friend WithEvents HealthMonitoringL As Label
+    Friend WithEvents AnimationPanel As Panel
 End Class

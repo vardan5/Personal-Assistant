@@ -24,7 +24,7 @@ Partial Class Dashboard
     Private Sub InitializeComponent()
         Me.BasePanel = New System.Windows.Forms.Panel()
         Me.FinanceManagement1 = New Personal_Assistant.FinanceManagement()
-        Me.TitlePanel = New System.Windows.Forms.Panel()
+        Me.TitlePanel1 = New System.Windows.Forms.Panel()
         Me.MinimizeB = New System.Windows.Forms.Button()
         Me.CloseB = New System.Windows.Forms.Button()
         Me.NavigationPanel = New System.Windows.Forms.Panel()
@@ -32,8 +32,9 @@ Partial Class Dashboard
         Me.HealthMonitorNavB = New System.Windows.Forms.Button()
         Me.TaskManagerNavB = New System.Windows.Forms.Button()
         Me.OptionsB = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BasePanel.SuspendLayout()
-        Me.TitlePanel.SuspendLayout()
+        Me.TitlePanel1.SuspendLayout()
         Me.NavigationPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,20 +60,20 @@ Partial Class Dashboard
         Me.FinanceManagement1.BackColor = System.Drawing.Color.Indigo
         Me.FinanceManagement1.Location = New System.Drawing.Point(0, 0)
         Me.FinanceManagement1.Name = "FinanceManagement1"
-        Me.FinanceManagement1.Size = New System.Drawing.Size(965, 665)
+        Me.FinanceManagement1.Size = New System.Drawing.Size(965, 662)
         Me.FinanceManagement1.TabIndex = 2
         '
-        'TitlePanel
+        'TitlePanel1
         '
-        Me.TitlePanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.TitlePanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TitlePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.TitlePanel.Controls.Add(Me.MinimizeB)
-        Me.TitlePanel.Controls.Add(Me.CloseB)
-        Me.TitlePanel.Location = New System.Drawing.Point(56, 3)
-        Me.TitlePanel.Name = "TitlePanel"
-        Me.TitlePanel.Size = New System.Drawing.Size(965, 43)
-        Me.TitlePanel.TabIndex = 0
+        Me.TitlePanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.TitlePanel1.Controls.Add(Me.MinimizeB)
+        Me.TitlePanel1.Controls.Add(Me.CloseB)
+        Me.TitlePanel1.Location = New System.Drawing.Point(56, 3)
+        Me.TitlePanel1.Name = "TitlePanel1"
+        Me.TitlePanel1.Size = New System.Drawing.Size(965, 43)
+        Me.TitlePanel1.TabIndex = 0
         '
         'MinimizeB
         '
@@ -106,6 +107,7 @@ Partial Class Dashboard
         '
         Me.NavigationPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.NavigationPanel.Controls.Add(Me.Button1)
         Me.NavigationPanel.Controls.Add(Me.FinanceManagerNavB)
         Me.NavigationPanel.Controls.Add(Me.HealthMonitorNavB)
         Me.NavigationPanel.Controls.Add(Me.TaskManagerNavB)
@@ -122,9 +124,9 @@ Partial Class Dashboard
         Me.FinanceManagerNavB.FlatAppearance.BorderSize = 0
         Me.FinanceManagerNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
         Me.FinanceManagerNavB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.FinanceManagerNavB.Location = New System.Drawing.Point(8, 81)
+        Me.FinanceManagerNavB.Location = New System.Drawing.Point(7, 140)
         Me.FinanceManagerNavB.Name = "FinanceManagerNavB"
-        Me.FinanceManagerNavB.Size = New System.Drawing.Size(40, 40)
+        Me.FinanceManagerNavB.Size = New System.Drawing.Size(40, 48)
         Me.FinanceManagerNavB.TabIndex = 3
         Me.FinanceManagerNavB.UseVisualStyleBackColor = True
         '
@@ -135,7 +137,7 @@ Partial Class Dashboard
         Me.HealthMonitorNavB.FlatAppearance.BorderSize = 0
         Me.HealthMonitorNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
         Me.HealthMonitorNavB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HealthMonitorNavB.Location = New System.Drawing.Point(8, 235)
+        Me.HealthMonitorNavB.Location = New System.Drawing.Point(7, 276)
         Me.HealthMonitorNavB.Name = "HealthMonitorNavB"
         Me.HealthMonitorNavB.Size = New System.Drawing.Size(40, 48)
         Me.HealthMonitorNavB.TabIndex = 2
@@ -148,7 +150,7 @@ Partial Class Dashboard
         Me.TaskManagerNavB.FlatAppearance.BorderSize = 0
         Me.TaskManagerNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
         Me.TaskManagerNavB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TaskManagerNavB.Location = New System.Drawing.Point(8, 154)
+        Me.TaskManagerNavB.Location = New System.Drawing.Point(7, 204)
         Me.TaskManagerNavB.Name = "TaskManagerNavB"
         Me.TaskManagerNavB.Size = New System.Drawing.Size(40, 48)
         Me.TaskManagerNavB.TabIndex = 1
@@ -161,11 +163,24 @@ Partial Class Dashboard
         Me.OptionsB.FlatAppearance.BorderSize = 0
         Me.OptionsB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
         Me.OptionsB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.OptionsB.Location = New System.Drawing.Point(9, 8)
+        Me.OptionsB.Location = New System.Drawing.Point(7, 4)
         Me.OptionsB.Name = "OptionsB"
-        Me.OptionsB.Size = New System.Drawing.Size(40, 40)
+        Me.OptionsB.Size = New System.Drawing.Size(40, 48)
         Me.OptionsB.TabIndex = 0
         Me.OptionsB.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.logo
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(7, 68)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(40, 48)
+        Me.Button1.TabIndex = 24
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Dashboard
         '
@@ -174,21 +189,21 @@ Partial Class Dashboard
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1024, 720)
         Me.Controls.Add(Me.NavigationPanel)
-        Me.Controls.Add(Me.TitlePanel)
+        Me.Controls.Add(Me.TitlePanel1)
         Me.Controls.Add(Me.BasePanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Dashboard"
         Me.Text = "Dashboard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.BasePanel.ResumeLayout(False)
-        Me.TitlePanel.ResumeLayout(False)
+        Me.TitlePanel1.ResumeLayout(False)
         Me.NavigationPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents BasePanel As Panel
-    Friend WithEvents TitlePanel As Panel
+    Friend WithEvents TitlePanel1 As Panel
     Friend WithEvents NavigationPanel As Panel
     Friend WithEvents OptionsB As Button
     Friend WithEvents FinanceManagerNavB As Button
@@ -197,4 +212,5 @@ Partial Class Dashboard
     Friend WithEvents MinimizeB As Button
     Friend WithEvents CloseB As Button
     Friend WithEvents FinanceManagement1 As FinanceManagement
+    Friend WithEvents Button1 As Button
 End Class

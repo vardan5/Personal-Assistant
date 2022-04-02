@@ -10,12 +10,12 @@
     'TitlePanel
 
     'For draging
-    Private Sub TitlePanel_MouseDown(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseDown ', LogoPB.MouseDown, TitleL.MouseDown
+    Private Sub TitlePanel_MouseDown(sender As Object, e As MouseEventArgs) Handles TitlePanel1.MouseDown ', LogoPB.MouseDown, TitleL.MouseDown
         If e.Button = MouseButtons.Left Then
             loc = e.Location
         End If
     End Sub
-    Private Sub TitlePanel_MouseMove(sender As Object, e As MouseEventArgs) Handles TitlePanel.MouseMove ', LogoPB.MouseMove, TitleL.MouseMove
+    Private Sub TitlePanel_MouseMove(sender As Object, e As MouseEventArgs) Handles TitlePanel1.MouseMove ', LogoPB.MouseMove, TitleL.MouseMove
         If e.Button = MouseButtons.Left Then
             Me.Location += e.Location - loc
         End If
@@ -47,12 +47,5 @@
 
     End Sub
 
-    Private Sub FinanceManagerNavB_Click(sender As Object, e As EventArgs) Handles FinanceManagerNavB.Click
-
-    End Sub
-
-    Private Sub TaskManagerNavB_Click(sender As Object, e As EventArgs) Handles TaskManagerNavB.Click
-
-    End Sub
 
 End Class
