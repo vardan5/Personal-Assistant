@@ -58,7 +58,7 @@ Partial Class TaskManagement
         '
         'Splitter1
         '
-        Me.Splitter1.BackColor = System.Drawing.Color.Indigo
+        Me.Splitter1.BackColor = System.Drawing.Color.BlueViolet
         Me.Splitter1.Location = New System.Drawing.Point(600, 0)
         Me.Splitter1.Name = "Splitter1"
         Me.Splitter1.Size = New System.Drawing.Size(8, 585)
@@ -108,9 +108,9 @@ Partial Class TaskManagement
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AddTaskB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.AddTaskB
         Me.AddTaskB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.AddTaskB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.AddTaskB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.AddTaskB.FlatAppearance.BorderSize = 2
-        Me.AddTaskB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.AddTaskB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.AddTaskB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddTaskB.Location = New System.Drawing.Point(93, 90)
         Me.AddTaskB.Name = "AddTaskB"
@@ -125,9 +125,9 @@ Partial Class TaskManagement
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ViewTaskB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.ViewTaskB
         Me.ViewTaskB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ViewTaskB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.ViewTaskB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.ViewTaskB.FlatAppearance.BorderSize = 2
-        Me.ViewTaskB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.ViewTaskB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.ViewTaskB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ViewTaskB.Location = New System.Drawing.Point(345, 90)
         Me.ViewTaskB.Name = "ViewTaskB"
@@ -142,9 +142,9 @@ Partial Class TaskManagement
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DeleteTaskB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.DeleteTaskB
         Me.DeleteTaskB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.DeleteTaskB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.DeleteTaskB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.DeleteTaskB.FlatAppearance.BorderSize = 2
-        Me.DeleteTaskB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.DeleteTaskB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.DeleteTaskB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DeleteTaskB.Location = New System.Drawing.Point(93, 334)
         Me.DeleteTaskB.Name = "DeleteTaskB"
@@ -157,9 +157,9 @@ Partial Class TaskManagement
         Me.SoonB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SoonB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.SoonB.FlatAppearance.BorderSize = 2
-        Me.SoonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.SoonB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SoonB.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SoonB.ForeColor = System.Drawing.Color.White
@@ -176,7 +176,7 @@ Partial Class TaskManagement
         Me.AddTaskL.Dock = System.Windows.Forms.DockStyle.Top
         Me.AddTaskL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddTaskL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AddTaskL.ForeColor = System.Drawing.Color.Indigo
+        Me.AddTaskL.ForeColor = System.Drawing.Color.BlueViolet
         Me.AddTaskL.Location = New System.Drawing.Point(93, 250)
         Me.AddTaskL.Name = "AddTaskL"
         Me.AddTaskL.Size = New System.Drawing.Size(162, 35)
@@ -190,7 +190,7 @@ Partial Class TaskManagement
         Me.ViewTaskL.Dock = System.Windows.Forms.DockStyle.Top
         Me.ViewTaskL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ViewTaskL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ViewTaskL.ForeColor = System.Drawing.Color.Indigo
+        Me.ViewTaskL.ForeColor = System.Drawing.Color.BlueViolet
         Me.ViewTaskL.Location = New System.Drawing.Point(345, 250)
         Me.ViewTaskL.Name = "ViewTaskL"
         Me.ViewTaskL.Size = New System.Drawing.Size(162, 35)
@@ -204,7 +204,7 @@ Partial Class TaskManagement
         Me.DeleteTaskL.Dock = System.Windows.Forms.DockStyle.Top
         Me.DeleteTaskL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DeleteTaskL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DeleteTaskL.ForeColor = System.Drawing.Color.Indigo
+        Me.DeleteTaskL.ForeColor = System.Drawing.Color.BlueViolet
         Me.DeleteTaskL.Location = New System.Drawing.Point(93, 494)
         Me.DeleteTaskL.Name = "DeleteTaskL"
         Me.DeleteTaskL.Size = New System.Drawing.Size(162, 35)
@@ -247,7 +247,7 @@ Partial Class TaskManagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Indigo
+        Me.BackColor = System.Drawing.Color.BlueViolet
         Me.Controls.Add(Me.BasePanel)
         Me.Controls.Add(Me.TitlePanel)
         Me.DoubleBuffered = True

@@ -257,8 +257,12 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        MsgBox(Application.UserAppDataPath)
+        Dim DBLocation As String
+        'Store the location of the database here
+        DBLocation = "E:\VB Project\Personal Assistant\Personal Assistant\Personal Assistant\PersonalAssistantDB.mdf"
         'Setting Connection String
-        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\VB Project\Personal Assistant\Personal Assistant\Personal Assistant\PersonalAssistantDB.mdf;Integrated Security=True"
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" & DBLocation & ";Integrated Security=True"
 
     End Sub
 
@@ -301,6 +305,5 @@ Public Class Form1
         con.Close()
         Return Answer
     End Function
-
 
 End Class

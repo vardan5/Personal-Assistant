@@ -59,7 +59,7 @@ Partial Class HealthMonitoring
         '
         'Splitter1
         '
-        Me.Splitter1.BackColor = System.Drawing.Color.Indigo
+        Me.Splitter1.BackColor = System.Drawing.Color.BlueViolet
         Me.Splitter1.Location = New System.Drawing.Point(600, 0)
         Me.Splitter1.Name = "Splitter1"
         Me.Splitter1.Size = New System.Drawing.Size(8, 585)
@@ -110,9 +110,9 @@ Partial Class HealthMonitoring
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AddTransactionB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.AddTransactionB
         Me.AddTransactionB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.AddTransactionB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.AddTransactionB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.AddTransactionB.FlatAppearance.BorderSize = 2
-        Me.AddTransactionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.AddTransactionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.AddTransactionB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddTransactionB.Location = New System.Drawing.Point(93, 90)
         Me.AddTransactionB.Name = "AddTransactionB"
@@ -127,9 +127,9 @@ Partial Class HealthMonitoring
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ViewTransactionB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.ViewTransactionB
         Me.ViewTransactionB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ViewTransactionB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.ViewTransactionB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.ViewTransactionB.FlatAppearance.BorderSize = 2
-        Me.ViewTransactionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.ViewTransactionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.ViewTransactionB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ViewTransactionB.Location = New System.Drawing.Point(345, 90)
         Me.ViewTransactionB.Name = "ViewTransactionB"
@@ -144,9 +144,9 @@ Partial Class HealthMonitoring
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ViewAccountsB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.ViewAccountsB1
         Me.ViewAccountsB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ViewAccountsB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.ViewAccountsB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.ViewAccountsB.FlatAppearance.BorderSize = 2
-        Me.ViewAccountsB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.ViewAccountsB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.ViewAccountsB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ViewAccountsB.Location = New System.Drawing.Point(93, 334)
         Me.ViewAccountsB.Name = "ViewAccountsB"
@@ -159,9 +159,9 @@ Partial Class HealthMonitoring
         Me.SoonB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SoonB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.SoonB.FlatAppearance.BorderSize = 2
-        Me.SoonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.SoonB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SoonB.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SoonB.ForeColor = System.Drawing.Color.White
@@ -178,7 +178,7 @@ Partial Class HealthMonitoring
         Me.AddTransactionL.Dock = System.Windows.Forms.DockStyle.Top
         Me.AddTransactionL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddTransactionL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AddTransactionL.ForeColor = System.Drawing.Color.Indigo
+        Me.AddTransactionL.ForeColor = System.Drawing.Color.BlueViolet
         Me.AddTransactionL.Location = New System.Drawing.Point(93, 250)
         Me.AddTransactionL.Name = "AddTransactionL"
         Me.AddTransactionL.Size = New System.Drawing.Size(162, 70)
@@ -192,7 +192,7 @@ Partial Class HealthMonitoring
         Me.ViewTransactionL.Dock = System.Windows.Forms.DockStyle.Top
         Me.ViewTransactionL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ViewTransactionL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ViewTransactionL.ForeColor = System.Drawing.Color.Indigo
+        Me.ViewTransactionL.ForeColor = System.Drawing.Color.BlueViolet
         Me.ViewTransactionL.Location = New System.Drawing.Point(345, 250)
         Me.ViewTransactionL.Name = "ViewTransactionL"
         Me.ViewTransactionL.Size = New System.Drawing.Size(162, 70)
@@ -206,7 +206,7 @@ Partial Class HealthMonitoring
         Me.ViewAccountsL.Dock = System.Windows.Forms.DockStyle.Top
         Me.ViewAccountsL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ViewAccountsL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ViewAccountsL.ForeColor = System.Drawing.Color.Indigo
+        Me.ViewAccountsL.ForeColor = System.Drawing.Color.BlueViolet
         Me.ViewAccountsL.Location = New System.Drawing.Point(93, 494)
         Me.ViewAccountsL.Name = "ViewAccountsL"
         Me.ViewAccountsL.Size = New System.Drawing.Size(162, 35)
@@ -251,7 +251,7 @@ Partial Class HealthMonitoring
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.Color.Indigo
+        Me.Label1.ForeColor = System.Drawing.Color.BlueViolet
         Me.Label1.Location = New System.Drawing.Point(345, 494)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(162, 35)
@@ -263,7 +263,7 @@ Partial Class HealthMonitoring
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Indigo
+        Me.BackColor = System.Drawing.Color.BlueViolet
         Me.Controls.Add(Me.BasePanel)
         Me.Controls.Add(Me.TitlePanel)
         Me.Name = "HealthMonitoring"

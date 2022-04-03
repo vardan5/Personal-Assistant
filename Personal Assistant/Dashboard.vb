@@ -1,12 +1,10 @@
 ﻿Public Class Dashboard
     Dim loc As Point
-    Dim currentUserControl As UserControl
+    Friend currentUserControl As UserControl
 
     Private Sub Dashboard_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.FromArgb(255, 75, 0, 130), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 75, 0, 130), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 75, 0, 130), 3, ButtonBorderStyle.Solid, Color.FromArgb(255, 75, 0, 130), 3, ButtonBorderStyle.Solid)
     End Sub
-
-
 
     'FOR TITLE PANEL
     'For draging

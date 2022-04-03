@@ -72,7 +72,7 @@ Partial Class Form1
         '
         Me.LoginPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LoginPanel.BackColor = System.Drawing.Color.Indigo
+        Me.LoginPanel.BackColor = System.Drawing.Color.BlueViolet
         Me.LoginPanel.Controls.Add(Me.ForgotPassLL)
         Me.LoginPanel.Controls.Add(Me.ResetB)
         Me.LoginPanel.Controls.Add(Me.LoginB)
@@ -194,7 +194,7 @@ Partial Class Form1
         Me.MinimizeB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.MinB
         Me.MinimizeB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MinimizeB.FlatAppearance.BorderSize = 0
-        Me.MinimizeB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.MinimizeB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.MinimizeB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.MinimizeB.Location = New System.Drawing.Point(699, 7)
         Me.MinimizeB.Name = "MinimizeB"
@@ -219,7 +219,7 @@ Partial Class Form1
         Me.CloseB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.CloseB
         Me.CloseB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.CloseB.FlatAppearance.BorderSize = 0
-        Me.CloseB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.CloseB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.CloseB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CloseB.Location = New System.Drawing.Point(733, 7)
         Me.CloseB.Name = "CloseB"
@@ -243,7 +243,7 @@ Partial Class Form1
         '
         Me.ChangePasswordPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ChangePasswordPanel.BackColor = System.Drawing.Color.Indigo
+        Me.ChangePasswordPanel.BackColor = System.Drawing.Color.BlueViolet
         Me.ChangePasswordPanel.Controls.Add(Me.BackToSecQuesB)
         Me.ChangePasswordPanel.Controls.Add(Me.PictureBox2)
         Me.ChangePasswordPanel.Controls.Add(Me.NextToLoginB)
@@ -349,7 +349,7 @@ Partial Class Form1
         '
         Me.SecurityPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SecurityPanel.BackColor = System.Drawing.Color.Indigo
+        Me.SecurityPanel.BackColor = System.Drawing.Color.BlueViolet
         Me.SecurityPanel.Controls.Add(Me.SecurityL)
         Me.SecurityPanel.Controls.Add(Me.NextToNewPassB)
         Me.SecurityPanel.Controls.Add(Me.PictureBox1)
@@ -470,7 +470,7 @@ Partial Class Form1
         '
         Me.EnterUsernamePanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.EnterUsernamePanel.BackColor = System.Drawing.Color.Indigo
+        Me.EnterUsernamePanel.BackColor = System.Drawing.Color.BlueViolet
         Me.EnterUsernamePanel.Controls.Add(Me.BackToLoginB)
         Me.EnterUsernamePanel.Controls.Add(Me.SecLogo)
         Me.EnterUsernamePanel.Controls.Add(Me.NextToSecQuesB)
@@ -488,7 +488,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BackColor = System.Drawing.Color.Indigo
+        Me.BackColor = System.Drawing.Color.BlueViolet
         Me.ClientSize = New System.Drawing.Size(774, 517)
         Me.Controls.Add(Me.LoginPanel)
         Me.Controls.Add(Me.EnterUsernamePanel)

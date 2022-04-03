@@ -80,7 +80,7 @@ Partial Class Home
         '
         'Splitter1
         '
-        Me.Splitter1.BackColor = System.Drawing.Color.Indigo
+        Me.Splitter1.BackColor = System.Drawing.Color.BlueViolet
         Me.Splitter1.Location = New System.Drawing.Point(600, 0)
         Me.Splitter1.Name = "Splitter1"
         Me.Splitter1.Size = New System.Drawing.Size(8, 585)
@@ -130,9 +130,9 @@ Partial Class Home
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FinanceManagementB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.FinanceB
         Me.FinanceManagementB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.FinanceManagementB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.FinanceManagementB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.FinanceManagementB.FlatAppearance.BorderSize = 2
-        Me.FinanceManagementB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.FinanceManagementB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.FinanceManagementB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FinanceManagementB.Location = New System.Drawing.Point(93, 90)
         Me.FinanceManagementB.Name = "FinanceManagementB"
@@ -147,9 +147,9 @@ Partial Class Home
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TaskManagementB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.TaskB1
         Me.TaskManagementB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.TaskManagementB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.TaskManagementB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.TaskManagementB.FlatAppearance.BorderSize = 2
-        Me.TaskManagementB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.TaskManagementB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.TaskManagementB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TaskManagementB.Location = New System.Drawing.Point(345, 90)
         Me.TaskManagementB.Name = "TaskManagementB"
@@ -164,9 +164,9 @@ Partial Class Home
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.HealthMonitoring.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.HealthB
         Me.HealthMonitoring.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.HealthMonitoring.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.HealthMonitoring.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.HealthMonitoring.FlatAppearance.BorderSize = 2
-        Me.HealthMonitoring.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.HealthMonitoring.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.HealthMonitoring.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HealthMonitoring.Location = New System.Drawing.Point(93, 334)
         Me.HealthMonitoring.Name = "HealthMonitoring"
@@ -179,9 +179,9 @@ Partial Class Home
         Me.SoonB.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SoonB.FlatAppearance.BorderColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet
         Me.SoonB.FlatAppearance.BorderSize = 2
-        Me.SoonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.SoonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.SoonB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SoonB.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.SoonB.ForeColor = System.Drawing.Color.White
@@ -198,7 +198,7 @@ Partial Class Home
         Me.FinanceManagementL.Dock = System.Windows.Forms.DockStyle.Top
         Me.FinanceManagementL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FinanceManagementL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.FinanceManagementL.ForeColor = System.Drawing.Color.Indigo
+        Me.FinanceManagementL.ForeColor = System.Drawing.Color.BlueViolet
         Me.FinanceManagementL.Location = New System.Drawing.Point(93, 250)
         Me.FinanceManagementL.Name = "FinanceManagementL"
         Me.FinanceManagementL.Size = New System.Drawing.Size(162, 70)
@@ -212,7 +212,7 @@ Partial Class Home
         Me.TaskManagementL.Dock = System.Windows.Forms.DockStyle.Top
         Me.TaskManagementL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TaskManagementL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TaskManagementL.ForeColor = System.Drawing.Color.Indigo
+        Me.TaskManagementL.ForeColor = System.Drawing.Color.BlueViolet
         Me.TaskManagementL.Location = New System.Drawing.Point(345, 250)
         Me.TaskManagementL.Name = "TaskManagementL"
         Me.TaskManagementL.Size = New System.Drawing.Size(162, 70)
@@ -226,7 +226,7 @@ Partial Class Home
         Me.HealthMonitoringL.Dock = System.Windows.Forms.DockStyle.Top
         Me.HealthMonitoringL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HealthMonitoringL.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.HealthMonitoringL.ForeColor = System.Drawing.Color.Indigo
+        Me.HealthMonitoringL.ForeColor = System.Drawing.Color.BlueViolet
         Me.HealthMonitoringL.Location = New System.Drawing.Point(93, 494)
         Me.HealthMonitoringL.Name = "HealthMonitoringL"
         Me.HealthMonitoringL.Size = New System.Drawing.Size(162, 70)
@@ -247,7 +247,7 @@ Partial Class Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Indigo
+        Me.BackColor = System.Drawing.Color.BlueViolet
         Me.Controls.Add(Me.TitlePanel)
         Me.Controls.Add(Me.BasePanel)
         Me.DoubleBuffered = True

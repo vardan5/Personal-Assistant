@@ -59,7 +59,7 @@ Partial Class Dashboard
         '
         'FinanceManagement1
         '
-        Me.FinanceManagement1.BackColor = System.Drawing.Color.Indigo
+        Me.FinanceManagement1.BackColor = System.Drawing.Color.BlueViolet
         Me.FinanceManagement1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FinanceManagement1.Enabled = False
         Me.FinanceManagement1.Location = New System.Drawing.Point(0, 0)
@@ -70,7 +70,7 @@ Partial Class Dashboard
         '
         'Home1
         '
-        Me.Home1.BackColor = System.Drawing.Color.Indigo
+        Me.Home1.BackColor = System.Drawing.Color.BlueViolet
         Me.Home1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Home1.Location = New System.Drawing.Point(0, 0)
         Me.Home1.Name = "Home1"
@@ -95,7 +95,7 @@ Partial Class Dashboard
         Me.MinimizeB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.MinB
         Me.MinimizeB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MinimizeB.FlatAppearance.BorderSize = 0
-        Me.MinimizeB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.MinimizeB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.MinimizeB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.MinimizeB.Location = New System.Drawing.Point(884, 9)
         Me.MinimizeB.Name = "MinimizeB"
@@ -109,7 +109,7 @@ Partial Class Dashboard
         Me.CloseB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.CloseB
         Me.CloseB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.CloseB.FlatAppearance.BorderSize = 0
-        Me.CloseB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.CloseB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.CloseB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CloseB.Location = New System.Drawing.Point(924, 8)
         Me.CloseB.Name = "CloseB"
@@ -136,7 +136,7 @@ Partial Class Dashboard
         Me.HomeNavB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.logo
         Me.HomeNavB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.HomeNavB.FlatAppearance.BorderSize = 0
-        Me.HomeNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.HomeNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.HomeNavB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HomeNavB.Location = New System.Drawing.Point(7, 68)
         Me.HomeNavB.Name = "HomeNavB"
@@ -149,7 +149,7 @@ Partial Class Dashboard
         Me.FinanceManagerNavB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.FinanceB
         Me.FinanceManagerNavB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.FinanceManagerNavB.FlatAppearance.BorderSize = 0
-        Me.FinanceManagerNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.FinanceManagerNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.FinanceManagerNavB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.FinanceManagerNavB.Location = New System.Drawing.Point(7, 140)
         Me.FinanceManagerNavB.Name = "FinanceManagerNavB"
@@ -162,7 +162,7 @@ Partial Class Dashboard
         Me.HealthMonitorNavB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.HealthB
         Me.HealthMonitorNavB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.HealthMonitorNavB.FlatAppearance.BorderSize = 0
-        Me.HealthMonitorNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.HealthMonitorNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.HealthMonitorNavB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HealthMonitorNavB.Location = New System.Drawing.Point(7, 276)
         Me.HealthMonitorNavB.Name = "HealthMonitorNavB"
@@ -175,7 +175,7 @@ Partial Class Dashboard
         Me.TaskManagerNavB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.TaskB1
         Me.TaskManagerNavB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TaskManagerNavB.FlatAppearance.BorderSize = 0
-        Me.TaskManagerNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.TaskManagerNavB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.TaskManagerNavB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TaskManagerNavB.Location = New System.Drawing.Point(7, 204)
         Me.TaskManagerNavB.Name = "TaskManagerNavB"
@@ -188,7 +188,7 @@ Partial Class Dashboard
         Me.OptionsB.BackgroundImage = Global.Personal_Assistant.My.Resources.Resources.OptionsB
         Me.OptionsB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.OptionsB.FlatAppearance.BorderSize = 0
-        Me.OptionsB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo
+        Me.OptionsB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet
         Me.OptionsB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.OptionsB.Location = New System.Drawing.Point(7, 4)
         Me.OptionsB.Name = "OptionsB"
@@ -198,7 +198,7 @@ Partial Class Dashboard
         '
         'TaskManagement1
         '
-        Me.TaskManagement1.BackColor = System.Drawing.Color.Indigo
+        Me.TaskManagement1.BackColor = System.Drawing.Color.BlueViolet
         Me.TaskManagement1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TaskManagement1.Enabled = False
         Me.TaskManagement1.Location = New System.Drawing.Point(0, 0)
@@ -209,7 +209,7 @@ Partial Class Dashboard
         '
         'HealthMonitoring1
         '
-        Me.HealthMonitoring1.BackColor = System.Drawing.Color.Indigo
+        Me.HealthMonitoring1.BackColor = System.Drawing.Color.BlueViolet
         Me.HealthMonitoring1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HealthMonitoring1.Enabled = False
         Me.HealthMonitoring1.Location = New System.Drawing.Point(0, 0)
